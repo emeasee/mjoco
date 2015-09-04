@@ -1,0 +1,29 @@
+/**
+ * App-wide Styles
+ */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 730px;
+    }
+}
+
+// Component styles are injected through grunt
+// injector
+@import 'archive/archive.scss';
+@import 'cover/cover.scss';
+@import 'error/error.scss';
+@import 'info/info.scss';
+@import 'main/main.scss';
+@import 'projects/projects.scss';
+@import 'single/single.scss';
+@import 'vitals/vitals.scss';
+// endinjector

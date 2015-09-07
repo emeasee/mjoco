@@ -74,9 +74,7 @@
     "karma": "~0.12.9",
     "karma-ng-html2js-preprocessor": "~0.1.0",
     "supertest": "~0.11.0",
-    "should": "~3.3.1",
-    "node-bourbon": "^4.2.3",
-    "node-neat": "^1.7.2"
+    "should": "~3.3.1"
   },
   "engines": {
     "node": ">=0.10.0"

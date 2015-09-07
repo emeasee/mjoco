@@ -1,3 +1,4 @@
-<div class="col-md-12">
-This is the cover view.
+<div class="container cover {{ backgroundColour }}">
+  <iframe ng-if="supported || landing" ng-src="{{ coverUrl }}"></iframe>
+  <div class="unsupported" ng-if="!supported && !landing">Sorry this cover uses technology that your browser doesn't support. <br/>Please <a href="/covers/">return to the index</a>.</div>
 </div>

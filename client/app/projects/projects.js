@@ -1,11 +1,24 @@
 'use strict';
 
 angular.module('mjocoApp')
-  .config(function ($stateProvider) {
-    $stateProvider
-      .state('projects', {
-        url: '/projects',
-        templateUrl: 'app/projects/projects.html',
-        controller: 'ProjectsCtrl'
-      });
-  });
+  .config(['$stateProvider',function ($stateProvider) {
+    $stateProvider.state('main.projects', {
+      url: '/projects/{tags:[a-z0-9_-]{1,50}}/',
+      resolve: {
+        projectsData: ['apiService', '$stateParams',
+          function(apiService, $stateParams) {
+            return apiService.get('projects', {
+              'tags': $stateParams.tags,
+              'replace': true
+            });
+          }
+        ]
+      },
+      views: {
+        'article@': {
+          templateUrl: 'app/projects/projects.html',
+          controller: 'ProjectsCtrl'
+        }
+      }
+    });
+  }]);

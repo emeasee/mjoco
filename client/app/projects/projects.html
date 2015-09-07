@@ -1,3 +1,37 @@
-<div class="col-md-12">
-This is the projects view.
+<div class="projects" ng-hardscroll="{ steps: projects.length, startElement: startElement}">
+  <div class="projects-wrap" >
+    <div class="projects-project ng-wait-for-images loading" ng-repeat="project in projects">
+
+      <div class="projects-project-content {{ project.project_template }} {{ project.project_background }}-background">
+        <a href="{{currentPath}}{{ project.project_url }}/">
+
+          <div
+            class="assets-wrap"
+            ng-class="{ fade: project.project_templates.fade, cycle: project.project_templates.cycle, nextPrevButtons: false }"
+            ng-cycle="{ itemSelector: '.asset-wrap', auto: true, playOnScroll: false }"
+            >
+            <div class="assets" >
+              <div ng-repeat="asset in project.project_assets" class="asset-wrap" data-ratio="{{ asset.asset_width/asset.asset_height }}">
+
+                <div ng-if="!project.project_templates.fill" class="asset {{ asset.asset_type }}" ng-include="'app/main/asset.html'"></div>
+
+                <div ng-if="project.project_templates.fill" class="asset-background" ng-attr-style="background-image: url(http://{{bucketName}}/{{slug}}/cache/{{slug}}-{{asset.asset_id}}{{asset.asset_format === 'jpg' && asset.asset_data_quality !== '1' ? imageSettingsLarge : ''}}{{asset.asset_format === 'jpg' && asset.asset_data_quality === '1' ? imageSettingsLargeBoost : ''}}.{{asset.asset_format}})"></div>
+
+                <div ng-if="project.project_templates.fill" class="asset">
+                  <img
+                    ng-src="http://{{bucketName}}/{{slug}}/cache/{{slug}}-{{asset.asset_id}}{{asset.asset_format === 'jpg' && asset.asset_data_quality !== '1' ? imageSettingsLarge : ''}}{{asset.asset_format === 'jpg' && asset.asset_data_quality === '1' ? imageSettingsLargeBoost : ''}}.{{asset.asset_format}}"
+                    ng-src-error
+                    />
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="projects-dummy"></div>
+  <div class="projects-next-prev"><span class="projects-prev">Previous</span><span class="projects-next-prev-slash">/</span><span class="projects-next">Next</span></div>
+  <div class="projects-back-to-top">Back to Top</div>
 </div>
+

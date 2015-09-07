@@ -3,12 +3,13 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<html ng-app="mjocoApp" ng-controller="MainCtrl">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <base href="/">
-    <title></title>
-    <meta name="description" content="">
+    <title>M-JO.CO - Mult-disciplinary Designer based in Paris</title>
+    <meta name="description" content="M-JO.CO - Mult-disciplinary Designer based in Paris">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(client) app/vendor.css -->
@@ -22,13 +23,14 @@
       <!-- endinjector -->
     <!-- endbuild -->
   </head>
-  <body ng-app="mjocoApp">
+  <body>
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+    <div ng-include="'components/navbar/navbar.html'"></div>
 
     <!-- Add your site or application content here -->
-    <div ui-view=""></div>
+    <article ui-view="article"></article>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <script>
@@ -48,30 +50,32 @@
     <!-- build:js({client,node_modules}) app/vendor.js -->
       <!-- bower:js -->
       <script src="bower_components/jquery/dist/jquery.js"></script>
+      <script src="bower_components/modernizr/modernizr.js"></script>
       <script src="bower_components/angular/angular.js"></script>
-      <script src="bower_components/angular-resource/angular-resource.js"></script>
-      <script src="bower_components/angular-cookies/angular-cookies.js"></script>
       <script src="bower_components/angular-animate/angular-animate.js"></script>
-      <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-      <script src="bower_components/angular-touch/angular-touch.js"></script>
-      <script src="bower_components/lodash/dist/lodash.compat.js"></script>
-      <script src="bower_components/angular-socket-io/socket.js"></script>
-      <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-      <script src="bower_components/angular-ui/build/angular-ui.min.js"></script>
-      <script src="bower_components/angular-ui-router-anim-in-out/anim-in-out.js"></script>
-      <script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+      <script src="bower_components/angular-cookies/angular-cookies.js"></script>
       <script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
+      <script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+      <script src="bower_components/angular-resource/angular-resource.js"></script>
+      <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+      <script src="bower_components/angular-socket-io/socket.js"></script>
+      <script src="bower_components/angular-touch/angular-touch.js"></script>
+      <script src="bower_components/angular-ui/build/angular-ui.min.js"></script>
+      <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+      <script src="bower_components/angular-ui-router-anim-in-out/anim-in-out.js"></script>
+      <script src="bower_components/lodash/dist/lodash.compat.js"></script>
       <script src="bower_components/threejs/build/three.min.js"></script>
       <script src="bower_components/threejs/examples/js/Detector.js"></script>
       <!-- endbower -->
       <script src="socket.io-client/socket.io.js"></script>
     <!-- endbuild -->
 
-        
+
         <!-- build:js({.tmp,client}) app/app.js -->
-        
+
         <script src="app/app.js"></script>
           <!-- injector:js -->
+          <script src="app/api.service.js"></script>
           <script src="app/archive/archive.controller.js"></script>
           <script src="app/archive/archive.js"></script>
           <script src="app/cover/cover.controller.js"></script>
@@ -81,7 +85,9 @@
           <script src="app/info/info.controller.js"></script>
           <script src="app/info/info.js"></script>
           <script src="app/main/main.controller.js"></script>
-          <script src="app/main/main.js"></script>
+          <script src="app/projects/cycle/cycle.directive.js"></script>
+          <script src="app/projects/hardscroll/hardscroll.directive.js"></script>
+          <script src="app/projects/ngSrc/ngSrc.directive.js"></script>
           <script src="app/projects/projects.controller.js"></script>
           <script src="app/projects/projects.js"></script>
           <script src="app/single/single.controller.js"></script>

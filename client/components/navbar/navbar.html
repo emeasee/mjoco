@@ -1,20 +1,26 @@
-<div class="navbar navbar-default navbar-static-top" ng-controller="NavbarCtrl">
-  <div class="container">
-    <div class="navbar-header">
-      <button class="navbar-toggle" type="button" ng-click="isCollapsed = !isCollapsed">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a href="/" class="navbar-brand">mjoco</a>
+<div>
+  <div class="nav-wrap">
+    <a href="/projects/featured/" class="nav-projects">Projects</a>
+    <a href="/projects/featured/" class="nav-featured">Featured</a>
+    <a href="/projects/interactive/" class="nav-interactive">Interactive</a>
+    <a href="/projects/books_or_publications/" class="nav-books-or-publications">Books/Publications</a>
+    <a href="/projects/art_direction/" class="nav-art-direction">Art Direction</a>
+    <a href="/projects/identity/" class="nav-identity">Identity</a>
+    <a href="/testcards/" class="nav-testcards">Testcards</a>
+    <a href="/information/" class="nav-information">Information</a>
+  </div>
+  <div class="active-wrap" ng-click="toggleMenu()">
+    <div class="active-overflow">
+      <div class="active" ng-class="{ arrow: primary.arrow }" ng-bind="primary.text">
+      </div>
+      <div class="active" ng-class="{ arrow: secondary.arrow }" ng-bind="secondary.text">
+      </div>
+      <div class="active" ng-class="{ arrow: tertiary.arrow }" ng-bind="tertiary.text" >
+      </div>
     </div>
-    <div collapse="isCollapsed" class="navbar-collapse collapse" id="navbar-main">
-      <ul class="nav navbar-nav">
-        <li ng-repeat="item in menu" ng-class="{active: isActive(item.link)}">
-            <a ng-href="{{item.link}}">{{item.title}}</a>
-        </li>
-      </ul>
-    </div>
+  </div>
+  <h1><a href="/">M-JO.CO</a></h1>
+  <div class="burger" ng-click="toggleMenu()">
+    &#9776;
   </div>
 </div>

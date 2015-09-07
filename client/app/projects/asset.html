@@ -1,0 +1,27 @@
+<img
+  ng-show="asset.asset_type === 'image' || isMobile"
+  ng-src="http://{{bucketName}}/{{slug}}/cache/{{slug}}-{{asset.asset_id}}{{asset.asset_format === 'jpg' && asset.asset_data_quality !== '1' ? imageSettingsMid : ''}}{{asset.asset_format === 'jpg' && asset.asset_data_quality === '1' ? imageSettingsMidBoost : ''}}.{{asset.asset_format}}"
+  ng-src-error
+  alt="{{ project.project_title }} {{ project.project_client }} {{asset.asset_data_caption}} #{{asset.asset_id}}"
+  />
+
+<iframe ng-if="asset.asset_type === 'vimeo' && !isMobile"
+        class="vimeo"
+        id="vimeo_{{asset.asset_id}}"
+        data-vimeo="{{ asset.asset_vimeo }}"
+        ng-src="{{ 'http://player.vimeo.com/video/' + asset.asset_vimeo +'?api=1&amp;width=100&amp;height=100&amp;player_id=vimeo_' + asset.asset_vimeo }}"
+        width="100%"
+        ng-style="{ 'max-height': asset.asset_height + 'px', 'max-width': asset.asset_width + 'px' }"
+        frameborder="0"
+        webkitAllowFullScreen allowFullScreen
+  ></iframe>
+
+<video ng-if="asset.asset_type === 'video' && !isMobile"
+       loop
+       muted
+       poster="http://{{bucketName}}/{{slug}}/cache/{{slug}}-{{asset.asset_id}}{{asset.asset_format === 'jpg' && asset.asset_data_quality !== '1' ? imageSettingsMid : ''}}{{asset.asset_format === 'jpg' && asset.asset_data_quality === '1' ? imageSettingsMidBoost : ''}}.{{asset.asset_format}}"
+  >
+  <source type="video/mp4" ng-src="{{ 'http://' + bucketName + '/' + slug +'/video/' + slug + '_' + asset.asset_id + '.mp4' }}" />
+  <source type="video/webm" ng-src="{{ 'http://' + bucketName + '/' + slug +'/video/' + slug + '_' + asset.asset_id + '.webm' }}" />
+  <source type="video/ogg" ng-src="{{ 'http://' + bucketName + '/' + slug +'/video/' + slug + '_' + asset.asset_id + '.ogg' }}" />
+</video>

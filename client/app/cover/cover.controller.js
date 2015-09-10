@@ -115,7 +115,7 @@ angular.module('mjocoApp')
 
         localStorageService.set('cover', index);
         //FIXME: This needs to be turned on again before deploy or the cover does not show
-        $scope.coverUrl = $scope.cover.data_url;
+        //scope.coverUrl = $scope.cover.data_url;
         $rootScope.textColor = $scope.cover.data_colour + '-text';
         $rootScope.backgroundColor = $scope.cover.data_background + '-background';
 

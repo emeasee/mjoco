@@ -3,6 +3,7 @@
 var _ = require('lodash');
 var Project = require('./project.model');
 
+//TODO: modify this handler that gets list of projects from the db based on req.query.tags. Then we need to return those projects with the tag requested in the json (hard part)
 // Get list of projects
 exports.index = function(req, res) {
   Project.find(function (err, projects) {

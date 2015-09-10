@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "dependencies": {
     "angular": "~1.4.0",
+    "normalize-css": "normalize.css#~3.0.3",
     "angular-animate": "~1.4.0",
     "angular-cookies": "~1.4.0",
     "angular-loading-bar": "~0.8.0",
@@ -14,12 +15,12 @@
     "angular-ui": "~0.4.0",
     "angular-ui-router": "~0.2.15",
     "angular-ui-router-anim-in-out": "~0.0.13",
-    "modernizr": "~2.7.2",
     "bourbon": "~4.2.4",
     "es5-shim": "~3.0.1",
     "jquery": "2.1.4",
     "json3": "~3.3.1",
     "lodash": "~2.4.1",
+    "modernizr": "~2.7.2",
     "neat": "~1.7.2",
     "threejs": "*"
   },

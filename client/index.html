@@ -3,7 +3,7 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-<html ng-app="mjocoApp" ng-controller="MainCtrl">
+<html ng-app="mjocoApp" ng-controller="MainCtrl" ng-class="{mobile: isMobile}">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,6 +14,7 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(client) app/vendor.css -->
       <!-- bower:css -->
+      <link rel="stylesheet" href="bower_components/normalize-css/normalize.css" />
       <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" />
       <!-- endbower -->
     <!-- endbuild -->
@@ -23,14 +24,13 @@
       <!-- endinjector -->
     <!-- endbuild -->
   </head>
-  <body>
+  <body class="white-background black-text main-landing header-out" ng-class="{'mobile': isMobile, 'not-mobile': !isMobile, 'portrait': isPortrait, 'landscape': !isPortrait}" ng-init="$root.bucketName=''; $root.icName=''; $root.slug='yes'; $root.strapline='Mult-disciplinary Designer based in Paris'; $root.landingdescription='Mac Oosthuizen is a Mult-disciplinary Designer based in Paris focused on improving the world through human-centered research, product focused development and innovation.';">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <div ng-include="'components/navbar/navbar.html'"></div>
+    <header ng-include="'components/navbar/navbar.html'" data-colour="" ng-class="{'menu-open':menuOpen}"></header>
 
-    <!-- Add your site or application content here -->
-    <article ui-view="article"></article>
+    <article ui-view="article" class="anim-in-out anim-fade" autoscroll="false" data-anim-speed="1000" data-anim-sync="false" data-anim-out-speed="1000" data-anim-in-speed="2000"></article>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <script>
@@ -49,8 +49,8 @@
     <![endif]-->
     <!-- build:js({client,node_modules}) app/vendor.js -->
       <!-- bower:js -->
-      <script src="bower_components/jquery/dist/jquery.js"></script>
       <script src="bower_components/modernizr/modernizr.js"></script>
+      <script src="bower_components/jquery/dist/jquery.js"></script>
       <script src="bower_components/angular/angular.js"></script>
       <script src="bower_components/angular-animate/angular-animate.js"></script>
       <script src="bower_components/angular-cookies/angular-cookies.js"></script>

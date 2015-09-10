@@ -4,6 +4,26 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
 
 /**
+ * $group Vars
+ */
+
+$off-white: #f1f1f1;
+$light-gray: #eee;
+$mid-gray: #ccc;
+$dark-gray: #999;
+$charcoal: #444;
+$black: #181818;
+$blue: #2e00ee;
+$red: #e00;
+$yellow: #ffa;
+$white: #fff;
+$orange: #ff5e15;
+$cubic: cubic-bezier(0.77, 0, 0.175, 1);
+$mobile: 800px;
+$max-width: 81rem;
+
+
+/**
  * App-wide Styles
  */
 
@@ -15,13 +35,116 @@
 }
 
 html{
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1em;
+  font-size: 90%;
+  margin: 0;
 }
 
-html, body {
+body {
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing:0.02em;
+  color: $black;
+  overflow:hidden;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  height:100%;
+  font-size:105%;
   margin: 0;
-  height: 100%;
+  line-height:155%;
+}
+
+input{
+  -webkit-font-smoothing: antialiased;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: $light-gray;
+}
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: none;
+  background: $mid-gray;
+}
+
+::selection {
+  background: $dark-gray;
+}
+::-moz-selection {
+  background: $dark-gray;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+:focus, input {
+  outline: 0;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+}
+ul {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+video{
+  max-width: 100%;
+  max-height: 100%;
+  vertical-align: bottom;
+}
+p, h1, h2, h3, h4, h5, ul, li {
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+}
+.placeholder {
+  display:none !important;
+}
+@mixin barberpole-background($color)
+{
+  background-size: 12px 12px;
+  @include linear-gradient(
+    45deg,
+    $color 25%,
+    $white 25%,
+    $white 50%,
+    $color 50%,
+    $color 75%,
+    $white 75%,
+    $white
+  );
+}
+
+@include keyframes(barberpole) {
+  0%{
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 24px;
+  }
+}
+@include keyframes(barberpole-backwards) {
+  0%{
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 -24px;
+  }
+}
+
+@mixin barberpole-animated($color)
+{
+  @include barberpole-background($color);
+  -webkit-animation: barberpole 1s linear infinite;
+  -moz-animation: barberpole 1s linear infinite;
+  animation: barberpole 1s linear infinite;
 }
 
 /* Responsive: Portrait tablets and up */
@@ -29,6 +152,24 @@ html, body {
     .container {
         max-width: 730px;
     }
+}
+
+article {
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  margin:0;
+  padding:0;
+  // overflow:hidden;
+  &.anim-out, &.anim-out{
+    .project-wrap {
+      overflow:hidden;
+    }
+  }
 }
 
 // Component styles are injected through grunt
@@ -41,4 +182,85 @@ html, body {
 @import 'projects/projects.scss';
 @import 'single/single.scss';
 @import 'vitals/vitals.scss';
+@import 'mixins.scss';
+@import 'navbar/navbar.scss';
 // endinjector
+
+.touch article{
+  // top: 4.4rem;
+}
+.touch{
+  .play{
+    @include absfull();
+    background-image: url('/styles/images/play.svg');
+    z-index:20;
+    background-position: 50%;
+    background-size:70%;
+    // display:none;
+  }
+}
+.touch .playing .play{
+  opacity:0;
+}
+
+#force-safari-redraw{
+  position:absolute;
+  bottom:-10px;
+  right:0;
+  width:20px;
+  height:20px;
+  background:#fcc;
+  z-index:-30;
+  visibility:hidden;
+}
+
+.loading img{
+  opacity: 0;
+}
+
+/**
+ * Responsive stuff
+ */
+
+@media (min-width:1280px) and (min-height:700px) {
+  html {
+    // font-size:125%;
+  }
+  body{
+    // font-size: 90%;
+  }
+}
+@media (min-width:1440px) and (min-height:810px) {
+  html {
+    // font-size: 110%;
+    font-size: 93%;
+  }
+  body{
+    font-size: 105%;
+  }
+}
+@media (min-width:1440px) and (min-height:910px) {
+  html {
+    // font-size: 110%;
+    font-size: 100%;
+  }
+  body{
+    font-size: 105%;
+  }
+}
+@media (min-width:1600px) and (min-height:910px) {
+  html {
+    // font-size: 110%;
+    font-size: 100%;
+  }
+  body{
+    font-size: 110%;
+  }
+}
+
+html.mobile{
+  font-size: 80%;
+}
+body.mobile{
+  font-size: 100%;
+}

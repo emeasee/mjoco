@@ -1,3 +1,107 @@
-<div class="col-md-12">
-This is the single view.
+<div class="project-wrap {{ project.project_background }}-background {{ project.project_color }}-text" ng-is-scrolled>
+  <div class="project-related-next-prev">
+    <div class="project ">
+
+      <div ng-repeat="section in project.project_sections" id="{{ section.section_url }}" class="project-section {{ section.section_template }} ">
+        <div>
+          <div ng-if="section.section_assets.length > 0 && section.section_templates.cycle === true" class="assets-wrap ng-wait-for-images " ng-class="{ fade: section.section_templates.fade, cycle: section.section_templates.cycle }" ng-cycle="{ itemSelector: '.asset-wrap', delay: (section.section_templates.fast) ? '1500' : '3000' }"
+            >
+            <div class="assets" ng-style="getAssetsHeight(section.section_assets)">
+              <div ng-repeat="asset in section.section_assets" class="asset-wrap" data-ratio="{{ asset.asset_width/asset.asset_height }}">
+                <div class="asset {{ asset.asset_type }} ng-wait-for-images loading" ng-include="'app/projects/asset.html'" ng-style="getAssetSize(asset)">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div ng-if="section.section_assets.length > 0 && section.section_templates.cycle !== true"class="assets-wrap" ng-class="{ grid: section.section_templates.grid }">
+            <div class="assets">
+              <div ng-repeat="asset in section.section_assets" class="asset-wrap" data-ratio="{{ asset.asset_width/asset.asset_height }}">
+                <div class="play" ng-click="playVideo($event)" ng-if="asset.asset_type === 'video' && isTouch && !isMobile">Play</div>
+                <div class="asset {{ asset.asset_type }} ng-wait-for-images loading" ng-play-in-view ng-include="'app/projects/asset.html'" ng-style="getAssetSize(asset)">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="iframe-wrap" ng-if="section.section_type === 'section-iframe'" style="padding-bottom: {{ 100 / section.section_iframe_ratio}}%">
+            <iframe ng-attr-src="{{section.section_iframe_url}}"></iframe>
+          </div>
+
+          <div class="text-content" ng-class="{'hide-extra':!section.section_show_title}">
+
+            <div ng-if="section.section_show_title" class="extra">
+
+
+              <div ng-if="project.project_title">Title: {{ project.project_title }}</div>
+
+              <div ng-if="!project.project_client_url">Client: {{ project.project_client }} </div>
+              <div ng-if="project.project_client_url">Client: <a href="{{project.project_client_url}}">{{ project.project_client }}</a></div>
+
+              <div ng-if="project.project_year > 2009">Year: <a href="/projects/{{ project.project_year }}">{{ project.project_year }}</a></div>
+              <div ng-if="project.project_year <= 2009">Year: {{ project.project_year }}</div>
+              <div class="text-content-discipline">
+                <ng-pluralize count="project.project_disciplines_human.length" when="{'one': 'Discipline:', 'other' : 'Disciplines:'}"></ng-pluralize>
+							<span ng-repeat="discipline in project.project_disciplines_human">
+								<a href="/projects/{{ discipline.url }}">{{ discipline.text }}</a>
+							</span>
+              </div>
+              <div class="break"></div>
+              <div>
+                <a href="http://{{ project.project_external_url }}" target='_blank'>
+                  {{ project.project_external_url }}
+                </a>
+              </div>
+
+            </div>
+
+            <div ng-if="section.section_text" class="text" ng-bind-html="section.section_text | widowFix"></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="project-next-prev" ng-if="isMobile">
+      <a
+        ng-click="$root.animType = 'anim-slide-right'"
+        href="{{ prev.url }}/"
+        class="project-next-prev-prev"
+        >
+        <div class="arrow">←</div>
+        <div class="title">{{ prev.title }}</div>
+      </a>
+      <a
+        ng-click="$root.animType = 'anim-slide-left'"
+        href="{{ next.url }}/"
+        class="project-next-prev-next"
+        >
+        <div class="title">{{ next.title }}</div>
+        <div class="arrow">→</div>
+      </a>
+    </div>
+    <div class="related">
+      <div>
+        <div class="related-projects" ng-class="{'hide-related':hideRelated}">
+          <div ng-repeat="related in project.project_related" class="related-project" data-index="{{$index}}">
+            <div class="assets-wrap {{ related.project_template }}">
+              <a ng-click="$root.setAnim('anim-slide-up'); $root.trackProject('Click Related')" href="/projects/{{related.project_disciplines_human[0].url}}/{{related.project_url }}">
+                <div ng-repeat="asset in related.project_assets" class="assets">
+                  <div class="asset {{ asset.asset_type }}">
+                    <img
+                      ng-src="http://{{bucketName}}/{{project.project_url}}-{{asset.asset_id}}-w380-h254.{{asset.asset_format}}"
+                      />
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="title">
+              <a href="/project/{{related.project_url}}">{{related.project_title}}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </div>
+

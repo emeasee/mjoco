@@ -98,9 +98,8 @@ angular.module('mjocoApp')
             $rootScope.pageTitle = $rootScope.strapline;
             $rootScope.description = $rootScope.landingdescription;
 
-            //TODO: Investigate this a bit more
-            //imageID = $scope.testcard.node_assets[0].asset_id;
-            //$rootScope.image = imageID + '-w700';
+            //imageID = $scope.cover.node_assets[0].asset_id;
+            $rootScope.image = imageID + '-w700';
 
             $rootScope.primary.text = "M-JO.CO";
 
@@ -115,7 +114,7 @@ angular.module('mjocoApp')
 
         localStorageService.set('cover', index);
         //FIXME: This needs to be turned on again before deploy or the cover does not show
-        //scope.coverUrl = $scope.cover.data_url;
+        $scope.coverUrl = $scope.cover.data_url;
         $rootScope.textColor = $scope.cover.data_colour + '-text';
         $rootScope.backgroundColor = $scope.cover.data_background + '-background';
 

@@ -9,7 +9,7 @@ angular.module('mjocoApp')
       if (projectsData.projects === null) {
         $location.path("/404/");
       }
-      //TODO: seriously need to simply this. we're not running on an api here...
+
       var tags = projectsData.tags;
       tags = tags.join('/');
 
@@ -61,15 +61,15 @@ angular.module('mjocoApp')
           $scope.imageSettingsMidBoost = '-w700-q50';
           $scope.imageSettingsLargeBoost = '-w700-q50';
         } else if ($rootScope.windowWidth < 1200) {
-          $scope.imageSettingsMid = '-w1200-q90-rz3-b75';
-          $scope.imageSettingsLarge = '-w1400-q90-rz3-b75';
-          $scope.imageSettingsMidBoost = '-w1200-q95-rz3-b75';
-          $scope.imageSettingsLargeBoost = '-w1400-q95-rz3-b75';
+          $scope.imageSettingsMid = '-w1200-q90';
+          $scope.imageSettingsLarge = '-w1400-q90';
+          $scope.imageSettingsMidBoost = '-w1200-q95';
+          $scope.imageSettingsLargeBoost = '-w1400-q95';
         } else {
-          $scope.imageSettingsMid = '-w1400-q90-rz3-b75';
-          $scope.imageSettingsLarge = '-w1600-q90-rz3-b75';
-          $scope.imageSettingsMidBoost = '-w1400-q95-rz3-b75';
-          $scope.imageSettingsLargeBoost = '-w1600-q95-rz3-b75';
+          $scope.imageSettingsMid = '-w1400-q90';
+          $scope.imageSettingsLarge = '-w1600-q90';
+          $scope.imageSettingsMidBoost = '-w1400-q95';
+          $scope.imageSettingsLargeBoost = '-w1600-q95';
         }
 
       });
@@ -96,7 +96,7 @@ angular.module('mjocoApp')
         setTimeout(function() {
           $rootScope.secondary.text = $scope.projects[i].project_title;
           $rootScope.secondary.url = $scope.projects[i].project_url;
-          $rootScope.textColor = $scope.projects[i].project_color + '-text';
+          $rootScope.textColor = $scope.projects[i].project_colour + '-text';
           $rootScope.backgroundColor = $scope.projects[i].project_background + '-background';
           $scope.$apply();
         }, 1);

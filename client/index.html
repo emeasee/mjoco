@@ -3,7 +3,7 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-<html ng-app="mjocoApp" ng-controller="MainCtrl" ng-class="{mobile: isMobile}">
+<html ng-app="mjocoApp" ng-controller="MainCtrl" ng-class="{'mobile': isMobile}">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,8 +14,8 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(client) app/vendor.css -->
       <!-- bower:css -->
-      <link rel="stylesheet" href="bower_components/normalize-css/normalize.css" />
       <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" />
+      <link rel="stylesheet" href="bower_components/normalize-css/normalize.css" />
       <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css({.tmp,client}) app/app.css -->
@@ -24,13 +24,60 @@
       <!-- endinjector -->
     <!-- endbuild -->
   </head>
-  <body class="white-background black-text main-landing header-out" ng-class="{'mobile': isMobile, 'not-mobile': !isMobile, 'portrait': isPortrait, 'landscape': !isPortrait}" ng-init="$root.bucketName=''; $root.icName=''; $root.slug='yes'; $root.strapline='Mult-disciplinary Designer based in Paris'; $root.landingdescription='Mac Oosthuizen is a Mult-disciplinary Designer based in Paris focused on improving the world through human-centered research, product focused development and innovation.';">
+  <body class="{{ stateID }} {{ backgroundColor }} {{ textColor }} {{ bodyHeaderClass }}"
+        ng-class="{ 'mobile': isMobile, 'not-mobile': !isMobile, 'portrait': isPortrait, 'landscape': !isPortrait }"
+        ng-init="$root.bucketName='s3-eu-west-1.amazonaws.com/mjoco'; $root.slug='portfolio'; $root.strapline='Mult-disciplinary Designer based in Paris'; $root.landingdescription='Mac Oosthuizen is a Mult-disciplinary Designer based in Paris focused on improving the world through human-centered research, product focused development and innovation.';">
+
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <header ng-include="'components/navbar/navbar.html'" data-colour="" ng-class="{'menu-open':menuOpen}"></header>
+    <header ng-include="'components/navbar/navbar.html'" data-colour="{{menuColour}}" ng-class="{'menu-open':menuOpen}"></header>
 
-    <article ui-view="article" class="anim-in-out anim-fade" autoscroll="false" data-anim-speed="1000" data-anim-sync="false" data-anim-out-speed="1000" data-anim-in-speed="2000"></article>
+    <div id="force-safari-redraw"></div>
+    <article ui-view="article" class="anim-in-out {{animType}}" autoscroll="false" data-anim-speed="1000" data-anim-sync="{{animSync}}" data-anim-out-speed="1000" data-anim-in-speed="2000"></article>
+
+    <div class="next-prev" ng-if="!isMobile">
+      <div
+        class="prev"
+        ng-mouseover="$root.hideRelated = true"
+        ng-mouseleave="$root.hideRelated = false"
+        >
+        <a
+          ng-click="$root.prev.hide = true; $root.setAnim('anim-slide-right'); $root.next.hide = true; $root.trackProject('Click Previous')"
+          href="{{ prev.url }}/"
+          ng-class="{'hide-image' : prev.hide}"
+          >
+          <div class="arrow">←</div>
+          <div class="title">{{ prev.title }}</div>
+          <div class="image" ng-repeat="asset in prev.assets" ng-attr-style="width:{{ next.width }}px;height:{{next.height}}px">
+            <img
+              ng-src="http://{{bucketName}}/{{}}-{{asset.asset_id}}-w380-h254.jpg"
+              />
+          </div>
+        </a>
+      </div>
+      <div
+        class="next"
+        ng-mouseover="$root.hideRelated = true"
+        ng-mouseleave="$root.hideRelated = false"
+        >
+        <a
+          ng-click="$root.next.hide = true; $root.setAnim('anim-slide-left'); $root.next.hide = true; $root.trackProject('Click Next')"
+          href="{{ next.url }}/"
+          ng-class="{'hide-image' : next.hide}"
+          >
+          <div class="arrow">→</div>
+          <div class="title">{{ next.title }}</div>
+          <div class="image" ng-repeat="asset in next.assets" ng-attr-style="width:{{ next.width }}px;height:{{next.height}}px">
+            <!-- TODO: Fix the URL below -->
+            <img
+              ng-src="http://{{bucketName}}/{{}}-{{asset.asset_id}}-w380-h254.{{asset.asset_format}}"
+
+              />
+          </div>
+        </a>
+      </div>
+    </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <script>
@@ -63,7 +110,10 @@
       <script src="bower_components/angular-ui/build/angular-ui.min.js"></script>
       <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
       <script src="bower_components/angular-ui-router-anim-in-out/anim-in-out.js"></script>
+      <script src="bower_components/imagesloaded-packaged/imagesloaded.pkgd.js"></script>
+      <script src="bower_components/jquery-mousewheel/jquery.mousewheel.js"></script>
       <script src="bower_components/lodash/dist/lodash.compat.js"></script>
+      <script src="bower_components/matthewlein-jQuery-widowFix/js/jquery.widowFix-1.3.2.min.js"></script>
       <script src="bower_components/threejs/build/three.min.js"></script>
       <script src="bower_components/threejs/examples/js/Detector.js"></script>
       <!-- endbower -->
@@ -75,6 +125,15 @@
 
         <script src="app/app.js"></script>
           <!-- injector:js -->
+          <script src="app/_directives/cycle/cycle.directive.js"></script>
+          <script src="app/_directives/hardscroll/hardscroll.directive.js"></script>
+          <script src="app/_directives/isScrolled/is-scrolled.directive.js"></script>
+          <script src="app/_directives/ngNoDrag/ng-no-drag.directive.js"></script>
+          <script src="app/_directives/ngPlayInView/ng-play-in-view.directive.js"></script>
+          <script src="app/_directives/ngSrc/ngSrc.directive.js"></script>
+          <script src="app/_directives/ngSrcError/ng-src-error.directive.js"></script>
+          <script src="app/_directives/ngWaitForImages/ng-wait-for-images.directive.js"></script>
+          <script src="app/_filters/main.filters.js"></script>
           <script src="app/api.service.js"></script>
           <script src="app/archive/archive.controller.js"></script>
           <script src="app/archive/archive.js"></script>
@@ -85,9 +144,6 @@
           <script src="app/info/info.controller.js"></script>
           <script src="app/info/info.js"></script>
           <script src="app/main/main.controller.js"></script>
-          <script src="app/projects/cycle/cycle.directive.js"></script>
-          <script src="app/projects/hardscroll/hardscroll.directive.js"></script>
-          <script src="app/projects/ngSrc/ngSrc.directive.js"></script>
           <script src="app/projects/projects.controller.js"></script>
           <script src="app/projects/projects.js"></script>
           <script src="app/single/single.controller.js"></script>

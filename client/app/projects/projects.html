@@ -13,13 +13,13 @@
             <div class="assets" >
               <div ng-repeat="asset in project.project_assets" class="asset-wrap" data-ratio="{{ asset.asset_width/asset.asset_height }}">
 
-                <div ng-if="!project.project_templates.fill" class="asset {{ asset.asset_type }}" ng-include="'app/main/asset.html'"></div>
+                <div ng-if="!project.project_templates.fill" class="asset {{ asset.asset_type }}" ng-include="'app/projects/asset.html'"></div>
 
-                <div ng-if="project.project_templates.fill" class="asset-background" ng-attr-style="background-image: url(http://{{bucketName}}/{{slug}}/cache/{{slug}}-{{asset.asset_id}}{{asset.asset_format === 'jpg' && asset.asset_data_quality !== '1' ? imageSettingsLarge : ''}}{{asset.asset_format === 'jpg' && asset.asset_data_quality === '1' ? imageSettingsLargeBoost : ''}}.{{asset.asset_format}})"></div>
+                <div ng-if="project.project_templates.fill" class="asset-background" ng-attr-style="background-image: url(http://{{bucketName}}/{{project.project_url}}-{{asset.asset_id}}{{asset.asset_format === 'jpg' && asset.asset_data_quality !== '1' ? imageSettingsLarge : ''}}{{asset.asset_format === 'jpg' && asset.asset_data_quality === '1' ? imageSettingsLargeBoost : ''}}.{{asset.asset_format}})"></div>
 
                 <div ng-if="project.project_templates.fill" class="asset">
                   <img
-                    ng-src="http://{{bucketName}}/{{slug}}/cache/{{slug}}-{{asset.asset_id}}{{asset.asset_format === 'jpg' && asset.asset_data_quality !== '1' ? imageSettingsLarge : ''}}{{asset.asset_format === 'jpg' && asset.asset_data_quality === '1' ? imageSettingsLargeBoost : ''}}.{{asset.asset_format}}"
+                    ng-src="http://{{bucketName}}/{{project.project_url}}-{{asset.asset_id}}{{asset.asset_format === 'jpg' && asset.asset_data_quality !== '1' ? imageSettingsLarge : ''}}{{asset.asset_format === 'jpg' && asset.asset_data_quality === '1' ? imageSettingsLargeBoost : ''}}.{{asset.asset_format}}"
                     ng-src-error
                     />
                 </div>

@@ -56,10 +56,10 @@ angular.module('mjocoApp')
 
       $rootScope.image = '1461-w700';
 
-      //$scope.app = {
-      //  bucketPath: 'http://assets.yesstud.io/yes/',
-      //  bucketName: 'assets.yesstud.io'
-      //};
+      $scope.app = {
+        bucketPath: 'http://s3-eu-west-1.amazonaws.com/mjoco/',
+        bucketName: 's3-eu-west-1.amazonaws.com/mjoco'
+      };
 
       // Strange IE bug
       $rootScope.isTouch = false;

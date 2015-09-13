@@ -11,8 +11,13 @@ angular.module('mjocoApp', [
   'ui.router',
   'ui.directives',
   'ng-src',
+  'ng-src-error',
   'ng-hardscroll',
   'ng-cycle',
+  'ng-wait-for-images',
+  'ng-is-scrolled',
+  'ng-no-drag',
+  'ng-play-in-view',
   'angular-loading-bar',
   'anim-in-out',
   'LocalStorageModule'
@@ -25,6 +30,7 @@ angular.module('mjocoApp', [
 
       $sceDelegateProvider.resourceUrlWhitelist([
         'self',
+        'http://s3-eu-west-1.amazonaws.com/mjoco/**',
         'http://*.vimeo.com/**'
       ]);
 

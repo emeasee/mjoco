@@ -1,0 +1,132 @@
+.next-prev{
+  display:none;
+}
+.main-project{
+  .next-prev{
+    display:block;
+  }
+}
+.next, .prev{
+  position: absolute;
+  bottom: 0;
+  @include transform(translateZ(0));
+  z-index: 49;
+  opacity:0;
+  @include transition(opacity 0.5s $cubic);
+  width:3em;
+  height:320px;
+  a{
+    width:100%;
+    height:100%;
+    display:block;
+    @include transition(opacity 0.5s $cubic 1s);
+    @include transform(translateX(0px));
+  }
+  .title{
+    position: absolute;
+    bottom:1em;
+    width:34vw;
+    max-width:380px;
+    height:3em;
+    opacity:0;
+    visibility: hidden;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .image{
+    position:absolute;
+    bottom:3.6em;
+    width:29.5vw;
+    max-width:380px;
+    overflow:hidden;
+    img{
+
+    }
+  }
+}
+
+.no-touch{
+  .next, .prev{
+    &:hover{
+      .title{
+        opacity:1;
+        visibility: visible;
+      }
+    }
+  }
+  .next:hover .image{
+    right:3rem;
+  }
+  .prev:hover .image{
+    left:3rem;
+  }
+  .next{
+    .hide-image{
+      opacity:0;
+      // @include transform(translateX(-50px));
+      @include transition(all 0.5s $cubic 0s);
+    }
+  }
+  .prev{
+    .hide-image{
+      opacity:0;
+      // @include transform(translateX(50px));
+      @include transition(all 0.5s $cubic 0s);
+    }
+  }
+}
+.prev{
+  left:0;
+  div{
+    @include transition(left 0.5s $cubic);
+  }
+  .arrow{
+    position: absolute;
+    left: 1rem;
+    bottom:1.5em;
+  }
+  .title{
+    left: 3em;
+    padding:1em 0;
+  }
+  .image{
+    left: -500px;
+    // left:-31vw;
+  }
+}
+.next{
+  right:8px;
+  div{
+    @include transition(right 0.5s $cubic);
+  }
+  .arrow{
+    position: absolute;
+    right: 1rem;
+    bottom:1.5em;
+  }
+  .title{
+    right: 3em;
+    text-align: right;
+    padding:1em 0;
+  }
+  .image{
+    right: -500px;
+    // right: -31vw;
+    img{
+      float:right;
+    }
+  }
+}
+.main-project{
+  .next, .prev{
+    opacity:1;
+  }
+}
+.touch{
+  .next, .prev{
+    .title{
+      opacity: 1;
+    }
+  }
+}

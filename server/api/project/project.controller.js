@@ -3,18 +3,21 @@
 var _ = require('lodash');
 var Project = require('./project.model');
 
-//TODO: modify this handler that gets list of projects from the db based on req.query.tags. Then we need to return those projects with the tag requested in the json (hard part)
 // Get list of projects
 exports.index = function(req, res) {
   Project.find(function (err, projects) {
     if(err) { return handleError(res, err); }
-    return res.status(200).json(projects);
+    var resTags = req.query.tags !== undefined ? req.query.tags : 'Archive';
+    projects.forEach (function(project, index) {
+      delete projects[index]._doc.project_sections;
+    });
+    return res.status(200).json({tags: [resTags], projects: projects});
   });
 };
 
 // Get a single project
 exports.show = function(req, res) {
-  Project.findById(req.params.id, function (err, project) {
+  Project.find({ project_url : req.params.url }, function (err, project) {
     if(err) { return handleError(res, err); }
     if(!project) { return res.status(404).send('Not Found'); }
     return res.json(project);

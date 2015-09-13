@@ -30,6 +30,9 @@ header {
   & > div {
     float: left;
   }
+  &:first-letter{
+    text-transform:capitalize;
+  }
   &.arrow:after{
     height:1.5rem;
     display:inline-block;

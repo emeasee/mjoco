@@ -1,0 +1,213 @@
+// @mixin disciplines($text, $border) {
+// 	.disciplines{
+// 		div {
+// 			float: left;
+// 			color: $text;
+// 			&:last-child {
+// 				border-right: 1px solid $border;
+// 			}
+// 		}
+// 		a {
+// 			float: left;
+// 			display: block;
+// 			color: $text;
+// 			border-left: 1px solid $border;
+// 			border-top: 1px solid $border;
+// 			border-bottom: 1px solid $border;
+// 			padding: 0.2em 0.3em;
+// 		}
+// 	}
+// }
+
+@mixin browser($color: $light-gray) {
+  .browser {
+    .asset img, .asset video {
+      border-top: 1px solid $color;
+      border-bottom: 1px solid $color;
+      border-left: 1px solid $color;
+      border-right: 1px solid $color;
+    }
+  }
+}
+
+// @mixin external($text: $white, $background: $black) {
+// 	.external{
+// 		div {
+// 			float: left;
+// 			margin-right:1em;
+// 			&:last-child {
+// 				border-right: 1px solid $background;
+// 			}
+// 		}
+// 		a {
+// 			float: left;
+// 			display: block;
+// 			background: $background;
+// 			color: $text;
+// 			border-left: 1px solid $background;
+// 			border-top: 1px solid $background;
+// 			border-bottom: 1px solid $background;
+// 			padding: 0.2em 0.3em;
+// 		}
+// 	}
+// }
+
+
+/* -------------------------- */
+
+.rich-black-background{
+  background: #000;
+  @include browser($charcoal);
+  ::-webkit-scrollbar-track {
+    background: lighten(#000, 10%);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: lighten(#000, 20%);
+  }
+}
+
+.black-background{
+  background: $black;
+  @include browser($charcoal);
+  ::-webkit-scrollbar-track {
+    background: darken($black, 10%);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: lighten($black, 10%);
+  }
+}
+
+.black-text{
+  color: $black;
+  a{
+    color: $black;
+    border-bottom-color: $black;
+  }
+}
+
+.charcoal-background{
+  background: $charcoal;
+  @include browser($black);
+  ::-webkit-scrollbar-track {
+    background: darken($charcoal, 10%);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: lighten($charcoal, 10%);
+  }
+}
+.charcoal-text{
+  color:$charcoal;
+  a{
+    color: $charcoal;
+    border-bottom-color: $charcoal;
+  }
+}
+
+.blue-background{
+  background: #2e00ee;
+  @include browser($white);
+  ::-webkit-scrollbar-track {
+    background: darken(#2e00ee, 10%);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: $white;
+  }
+  // @include animation(blueshift 15s infinite);
+  // p {
+  // 		@include smart-underline(#0022ee, $white, $dark-gray, 100%);
+  // 	}
+}
+
+@include keyframes(blueshift){
+  0%{
+    background:#2e00ee;
+
+  }
+  16%{
+    background:#0022ee;
+  }
+  32%{
+    background:#003cf5;
+  }
+  50%{
+    background:#0025c5;
+  }
+  66%{
+    background:#003cf5;
+  }
+  82%{
+    background:#0022ee;
+  }
+  100%{
+    background:#2e00ee;
+  }
+}
+
+
+/* -------------------------- */
+
+
+.white-background{
+  background: $white;
+  @include browser($light-gray);
+  ::-webkit-scrollbar-track {
+    background: darken($white, 10%);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: darken($white, 20%);
+  }
+
+}
+.white-text{
+  color:$white;
+  a{
+    color: $white;
+    border-bottom-color: $white;
+  }
+}
+
+.light-gray-background{
+  background: $light-gray;
+  @include browser($mid-gray);
+  ::-webkit-scrollbar-track {
+    background: lighten($light-gray, 10%);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: darken($light-gray, 10%);
+  }
+}
+.light-gray-text{
+  color:$light-gray;
+  a{
+    color: $light-gray;
+    border-bottom-color: $light-gray;
+  }
+}
+
+.off-white-background{
+  background: $off-white;
+  @include browser($mid-gray);
+  ::-webkit-scrollbar-track {
+    background: lighten($off-white, 10%);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: darken($off-white, 10%);
+  }
+}
+.off-white-text{
+  color:$off-white;
+  a{
+    color: $off-white;
+    border-bottom-color: $off-white;
+  }
+}
+.orange-background{
+  background: $orange;
+  @include browser($black);
+  ::-webkit-scrollbar-track {
+    background: darken($charcoal, 10%);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: lighten($charcoal, 10%);
+  }
+}

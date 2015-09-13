@@ -6,5 +6,6 @@ public
 .vscode
 client/bower_components
 dist
+iron.json
 /server/config/local.env.js
 npm-debug.log

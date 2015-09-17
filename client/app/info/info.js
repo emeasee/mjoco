@@ -1,11 +1,14 @@
 'use strict';
 
 angular.module('mjocoApp')
-  .config(function ($stateProvider) {
-    $stateProvider
-      .state('info', {
-        url: '/info',
-        templateUrl: 'app/info/info.html',
-        controller: 'InfoCtrl'
-      });
-  });
+  .config(['$stateProvider',function ($stateProvider) {
+    $stateProvider.state('main.information', {
+      url: '/information/',
+      views: {
+        'article@': {
+          templateUrl: 'app/info/info.html',
+          controller: 'InformationCtrl'
+        }
+      }
+    });
+  }]);

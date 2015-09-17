@@ -5,12 +5,22 @@ var Project = require('./project.model');
 
 // Get list of projects
 exports.index = function(req, res) {
-  Project.find(function (err, projects) {
+  Project.find({ project_tags : req.query.tags }, function (err, projects) {
     if(err) { return handleError(res, err); }
-    var resTags = req.query.tags !== undefined ? req.query.tags : 'Archive';
-    projects.forEach (function(project, index) {
-      delete projects[index]._doc.project_sections;
-    });
+    var resTags = null;
+    var humanTag;
+
+    if (typeof projects !== 'undefined' && projects.length > 0){
+      projects[0]._doc.project_tags_human.forEach(function (x, i){
+        if (x.url === req.query.tags){
+          humanTag = x.text;
+        }
+      });
+      resTags = req.query.tags !== undefined ? humanTag : 'Archive';
+      projects.forEach (function(project, index) {
+        delete projects[index]._doc.project_sections;
+      });
+    }
     return res.status(200).json({tags: [resTags], projects: projects});
   });
 };

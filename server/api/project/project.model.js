@@ -14,7 +14,8 @@ var ProjectSchema = new Schema({
   project_templates: {
     cycle: Boolean,
     auto: Boolean,
-    fast: Boolean
+    fast: Boolean,
+    fill: Boolean
   },
   project_external_url: String,
   project_tags: [String],
@@ -26,7 +27,7 @@ var ProjectSchema = new Schema({
     asset_height : String,
     asset_format : String,
     asset_type : String,
-    asset_flag : String
+    asset_flag : Boolean
   }],
   project_long_title: String,
   project_tags_human: [{
@@ -51,7 +52,7 @@ var ProjectSchema = new Schema({
       asset_height : String,
       asset_format : String,
       asset_type : String,
-      asset_flag : String
+      asset_flag : Boolean
     }],
     section_text : String,
     section_template : String,
@@ -62,7 +63,8 @@ var ProjectSchema = new Schema({
     section_assets_count : Number,
     section_templates : {
       cycle : Boolean,
-      fast : Boolean
+      fast : Boolean,
+      auto : Boolean
     }
   }]
 });

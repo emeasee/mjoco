@@ -51,7 +51,7 @@
           <div class="title">{{ prev.title }}</div>
           <div class="image" ng-repeat="asset in prev.assets" ng-attr-style="width:{{ next.width }}px;height:{{next.height}}px">
             <img
-              ng-src="http://{{bucketName}}/{{}}-{{asset.asset_id}}-w380-h254.jpg"
+              ng-src="http://{{bucketName}}/{{prev.slug}}-{{asset.asset_id}}-w380-h254.jpg"
               />
           </div>
         </a>
@@ -71,7 +71,7 @@
           <div class="image" ng-repeat="asset in next.assets" ng-attr-style="width:{{ next.width }}px;height:{{next.height}}px">
             <!-- TODO: Fix the URL below -->
             <img
-              ng-src="http://{{bucketName}}/{{}}-{{asset.asset_id}}-w380-h254.{{asset.asset_format}}"
+              ng-src="http://{{bucketName}}/{{next.slug}}-{{asset.asset_id}}-w380-h254.{{asset.asset_format}}"
 
               />
           </div>

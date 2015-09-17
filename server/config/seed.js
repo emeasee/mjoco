@@ -27,6 +27,7 @@ Project.find({}).remove(function() {
     project_title: 'Image Test #1',
     project_text: 'Some project text',
     project_year: '2015',
+    project_template: 'cycle auto fast',
     project_templates: {
       cycle: true,
       auto: true,
@@ -34,7 +35,7 @@ Project.find({}).remove(function() {
     },
     project_collaborator: 'Someone',
     project_external_url: 'www.google.com',
-    project_tags: ['Featured','UI'],
+    project_tags: ['featured','user_interface'],
     project_colour: 'charcoal',
     project_background: 'off-white',
     project_assets: [{
@@ -61,15 +62,15 @@ Project.find({}).remove(function() {
     }],
     project_long_title: 'Image Test #1 Long Title',
     project_tags_human: [{
-      url : 'ui',
-      text : 'UI'
+      url : 'user_interface',
+      text : 'User Interface'
     },{
       url : 'featured',
       text : 'Featured'
     }],
     project_disciplines_human: [{
-      url : 'ui',
-      text : 'UI'
+      url : 'user_interface',
+      text : 'User Interface'
     }],
     project_sectors_human: [{
       url : 'technology',
@@ -103,11 +104,9 @@ Project.find({}).remove(function() {
       }],
       section_text : '',
       section_template : 'cycle fast',
-      section_tags : '',
       section_show_title : false,
       section_iframe_url : null,
       section_ratio : 1,
-      section_assets_count : 2,
       section_templates : {
         cycle : true,
         fast : true
@@ -121,6 +120,7 @@ Project.find({}).remove(function() {
       project_title: 'Video Test #1',
       project_text: 'Some project text',
       project_year: '2015',
+      project_template: 'cycle auto fast',
       project_templates: {
         cycle: true,
         auto: true,
@@ -128,7 +128,7 @@ Project.find({}).remove(function() {
       },
       project_collaborator: 'Someone',
       project_external_url: 'www.google.com',
-      project_tags: ['Featured','Research'],
+      project_tags: ['featured','interaction'],
       project_colour: 'black',
       project_background: 'off-white',
       project_assets: [{
@@ -137,26 +137,26 @@ Project.find({}).remove(function() {
         asset_height : '800',
         asset_format : 'jpg',
         asset_type : 'image',
-        asset_flag : '0'
+        asset_flag : false
       },{
         asset_id : '02',
         asset_width : '1200',
         asset_height : '800',
         asset_format : 'jpg',
         asset_type : 'image',
-        asset_flag : '0'
+        asset_flag : false
       },{
         asset_id : '03',
         asset_width : '1200',
         asset_height : '800',
         asset_format : 'jpg',
         asset_type : 'image',
-        asset_flag : '0'
+        asset_flag : false
       }],
       project_long_title: 'Video Test #1 Long Title',
       project_tags_human: [{
-        url : 'research',
-        text : 'Research'
+        url : 'interaction',
+        text : 'Interaction'
       },{
         url : 'featured',
         text : 'Featured'
@@ -179,22 +179,20 @@ Project.find({}).remove(function() {
           asset_height : '1800',
           asset_format : 'jpg',
           asset_type : 'image',
-          asset_flag : '0'
+          asset_flag : false
         },{
           asset_id : '02',
           asset_width : '2800',
           asset_height : '1800',
           asset_format : 'jpg',
           asset_type : 'image',
-          asset_flag : '0'
+          asset_flag : false
         }],
         section_text : null,
         section_template : "cycle fade",
-        section_tags : null,
         section_show_title : false,
         section_iframe_url : null,
         section_ratio : 1,
-        section_assets_count : 2,
         section_templates : {
           cycle : true,
           fast : true

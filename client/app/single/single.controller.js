@@ -96,6 +96,9 @@ angular.module('mjocoApp')
       $rootScope.next.title = $scope.projects[$rootScope.next.position].project_title;
       $rootScope.prev.title = $scope.projects[$rootScope.prev.position].project_title;
 
+      $rootScope.next.slug = $scope.projects[$rootScope.next.position].project_url;
+      $rootScope.prev.slug = $scope.projects[$rootScope.prev.position].project_url;
+
       setTimeout(function(){
         $rootScope.prev.hide = false;
         $rootScope.next.hide = false;

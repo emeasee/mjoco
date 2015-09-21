@@ -7,6 +7,7 @@
 
 var Cover = require('../api/vital/vital.model');
 var Project = require('../api/project/project.model');
+var User = require('../api/user/user.model');
 
 Cover.find({}).remove(function() {
   Cover.create({
@@ -200,4 +201,17 @@ Project.find({}).remove(function() {
       }]
     });
 
+});
+
+User.find({}).remove(function() {
+  User.create({
+      provider: 'local',
+      role: 'admin',
+      name: 'Admin',
+      email: 'admin@admin.com',
+      password: 'admin'
+    }, function() {
+      console.log('finished populating users');
+    }
+  );
 });

@@ -22,6 +22,7 @@ var ProjectSchema = new Schema({
   project_colour: String,
   project_background: String,
   project_assets: [{
+    _id: false,
     asset_id : String,
     asset_width : String,
     asset_height : String,
@@ -31,22 +32,27 @@ var ProjectSchema = new Schema({
   }],
   project_long_title: String,
   project_tags_human: [{
+    _id: false,
     url : String,
     text : String
   }],
   project_disciplines_human: [{
+    _id: false,
     url : String,
     text : String
   }],
   project_sectors_human: [{
+    _id: false,
     url : String,
     text : String
   }],
   project_sections: [{
+    _id: false,
     section_type : String,
     section_url : String,
     section_title : String,
     section_assets : [{
+      _id: false,
       asset_id : String,
       asset_width : String,
       asset_height : String,

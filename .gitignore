@@ -10,3 +10,5 @@ dist
 iron.json
 /server/config/local.env.js
 npm-debug.log
+config.yml
+bundle

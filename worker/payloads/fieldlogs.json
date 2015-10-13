@@ -16,7 +16,7 @@
       },
       "project_collaborator": null,
       "project_external_url": "http://fieldlogs.com",
-      "project_tags": ["user-interface","identity"],
+      "project_tags": ["user-interface","identity","featured"],
       "project_colour": "charcoal",
       "project_background": "off-white",
       "project_assets": [{
@@ -55,6 +55,9 @@
       },{
         "url" : "identity",
         "text" : "Identity"
+      },{
+        "url" : "featured",
+        "text" : "Featured"
       }],
       "project_disciplines_human": [{
         "url" : "web",
@@ -199,7 +202,7 @@
         "section_show_title": true,
         "section_iframe_url": null,
         "section_iframe_ratio": 1,
-        "section_assets_count": false,
+        "section_assets_count": null,
         "section_templates": {
           "cycle" : false,
           "fade" : false,

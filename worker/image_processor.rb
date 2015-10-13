@@ -144,7 +144,11 @@ projects.each{ |project|
   if req.include? 'project_id'
     puts "#{project['project_url']} already exists: moving to update"
   else
-    RestClient.post "#{url}/api/projects/", project.to_json, {:Authorization => "Bearer #{hash['token']}", :content_type => :json, :accept => :json}
+    begin
+      RestClient.post "#{url}/api/projects", project.to_json, {:Authorization => "Bearer #{hash['token']}", :content_type => :json, :accept => :json}
+    rescue => e
+      puts e.response
+    end
   end
 
 }

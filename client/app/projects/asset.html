@@ -1,6 +1,6 @@
 <img
   ng-show="asset.asset_type === 'image' || isMobile"
-  ng-src="http://{{bucketName}}/{{project.project_url}}-{{asset.asset_id}}{{asset.asset_format === 'jpg' && asset.asset_data_quality !== '1' ? imageSettingsMid : ''}}{{asset.asset_format === 'jpg' && asset.asset_data_quality === '1' ? imageSettingsMidBoost : ''}}.{{asset.asset_format}}"
+  ng-src="http://{{bucketName}}/{{asset.asset_id}}{{asset.asset_format === 'jpg' && asset.asset_data_quality !== '1' ? imageSettingsMid : ''}}{{asset.asset_format === 'jpg' && asset.asset_data_quality === '1' ? imageSettingsMidBoost : ''}}.{{asset.asset_format}}"
   ng-src-error
   alt="{{ project.project_title }} {{ project.project_client }} {{asset.asset_data_caption}} #{{asset.asset_id}}"
   />

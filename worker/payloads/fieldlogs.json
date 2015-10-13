@@ -16,7 +16,7 @@
       },
       "project_collaborator": null,
       "project_external_url": "http://fieldlogs.com",
-      "project_tags": ["user-interface","identity","featured"],
+      "project_tags": ["user_interface","identity","featured"],
       "project_colour": "charcoal",
       "project_background": "off-white",
       "project_assets": [{
@@ -50,7 +50,7 @@
       }],
       "project_long_title": "Standardize Work & Real-Time Field Data Capture",
       "project_tags_human": [{
-        "url" : "user-interface",
+        "url" : "user_interface",
         "text" : "User Interface"
       },{
         "url" : "identity",

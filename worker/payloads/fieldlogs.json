@@ -6,16 +6,17 @@
       "project_client": "Trekea SAS",
       "project_title": "FieldLogs",
       "project_text": "Standardize Work & Real-Time Field Data Capture",
-      "project_year": "2014-2015",
+      "project_year": "2014",
       "project_template": "cycle auto fast",
       "project_templates": {
         "cycle": true,
         "auto": true,
         "fast": true,
+        "fade": false,
         "fill": false
       },
       "project_collaborator": null,
-      "project_external_url": "http://fieldlogs.com",
+      "project_external_url": "www.fieldlogs.com",
       "project_tags": ["user_interface","identity","featured"],
       "project_colour": "charcoal",
       "project_background": "off-white",
@@ -112,7 +113,8 @@
         "section_assets_count" : 2,
         "section_templates" : {
           "cycle" : true,
-          "fade" : true,
+          "fade" : false,
+          "auto": true,
           "fast" : true,
           "fill" : false
         }
@@ -138,6 +140,7 @@
         "section_templates" : {
           "cycle" : false,
           "fade" : false,
+          "auto": false,
           "fast" : false,
           "fill" : false
         }
@@ -163,6 +166,7 @@
         "section_templates" : {
           "cycle" : false,
           "fade" : false,
+          "auto": false,
           "fast" : false,
           "fill" : false
         }
@@ -188,6 +192,7 @@
         "section_templates" : {
           "cycle" : false,
           "fade" : false,
+          "auto": false,
           "fast" : false,
           "fill" : false
         }
@@ -206,6 +211,7 @@
         "section_templates": {
           "cycle" : false,
           "fade" : false,
+          "auto": false,
           "fast" : false,
           "fill" : false
         }

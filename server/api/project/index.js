@@ -10,8 +10,8 @@ var router = express.Router();
 router.get('/', controller.index);
 router.get('/:url', controller.show);
 router.post('/', auth.hasRole('admin'), controller.create);
-router.put('/:id', auth.hasRole('admin'), controller.update);
-router.patch('/:id', auth.hasRole('admin'), controller.update);
-router.delete('/:id', auth.hasRole('admin'), controller.destroy);
+router.put('/:url', auth.hasRole('admin'), controller.update);
+router.patch('/:url', auth.hasRole('admin'), controller.update);
+router.delete('/:url', auth.hasRole('admin'), controller.destroy);
 
 module.exports = router;

@@ -1,3 +1,4 @@
+/mjoco.iml
 node_modules
 public
 .tmp
@@ -10,5 +11,7 @@ dist
 iron.json
 /server/config/local.env.js
 npm-debug.log
-config.yml
+/worker/config-local.yml
+*.zip
+worker/config-prod.yml
 bundle

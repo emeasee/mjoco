@@ -14,6 +14,7 @@ var ProjectSchema = new Schema({
   project_templates: {
     cycle: Boolean,
     auto: Boolean,
+    fade: Boolean,
     fast: Boolean,
     fill: Boolean
   },
@@ -70,6 +71,8 @@ var ProjectSchema = new Schema({
     section_templates : {
       cycle : Boolean,
       fast : Boolean,
+      fill: Boolean,
+      fade: Boolean,
       auto : Boolean
     }
   }]

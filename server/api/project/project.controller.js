@@ -45,7 +45,7 @@ exports.create = function(req, res) {
 // Updates an existing project in the DB.
 exports.update = function(req, res) {
   if(req.body._id) { delete req.body._id; }
-  Project.findById(req.params.id, function (err, project) {
+  Project.findOne({ project_url : req.params.url }, function (err, project) {
     if (err) { return handleError(res, err); }
     if(!project) { return res.status(404).send('Not Found'); }
     var updated = _.merge(project, req.body);
@@ -58,7 +58,7 @@ exports.update = function(req, res) {
 
 // Deletes a project from the DB.
 exports.destroy = function(req, res) {
-  Project.findById(req.params.id, function (err, project) {
+  Project.findOne({ project_url : req.params.url }, function (err, project) {
     if(err) { return handleError(res, err); }
     if(!project) { return res.status(404).send('Not Found'); }
     project.remove(function(err) {

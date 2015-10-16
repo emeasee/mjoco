@@ -11,7 +11,6 @@ angular.module('mjocoApp', [
   'ui.router',
   'ui.directives',
   'ng-src',
-  'ng-src-error',
   'ng-hardscroll',
   'ng-cycle',
   'ng-wait-for-images',

@@ -1,9 +1,0 @@
-gem 'aws'
-gem 'subexec'
-gem 'rest-client'
-gem 'mini_magick'
-gem 'iron_mq'
-gem 'iron_worker'
-
-exec 'image_processor.rb'
-name 'ImageProcessor'

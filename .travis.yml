@@ -10,6 +10,6 @@ services: mongodb
 notifications:
   email:
     recipients:
-      - mackost@gmail.com
+      - m@m-jo.co
     on_success: [always|never|change] # default: change
     on_failure: [always|never|change] # default: always

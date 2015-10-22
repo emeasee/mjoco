@@ -53,7 +53,8 @@ var ProjectSchema = new Schema({
       asset_height : String,
       asset_format : String,
       asset_type : String,
-      asset_flag : Boolean
+      asset_flag : Boolean,
+      asset_vimeo : String
     }],
     section_text : String,
     section_template : String,

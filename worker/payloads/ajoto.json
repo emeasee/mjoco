@@ -1,0 +1,154 @@
+{
+  "projects": [
+    {
+	    "project_id": "02",
+      "project_url": "ajoto",
+      "project_client": "AJOTO Ltd.",
+      "project_title": "AJOTO",
+      "project_text": "Beautiful Tools for your Journey",
+      "project_year": "2014",
+      "project_template": "",
+      "project_templates": {
+        "cycle": false,
+        "auto": false,
+        "fast": false,
+        "fade": false,
+        "fill": false
+      },
+      "project_collaborator": null,
+      "project_external_url": "www.ajoto.com",
+      "project_tags": ["interaction","identity","featured"],
+      "project_colour": "charcoal",
+      "project_background": "off-white",
+      "project_assets": [{
+        "asset_id" : "video",
+        "asset_width" : "1280",
+        "asset_height" : "720",
+        "asset_format" : "jpg",
+        "asset_type" : "video",
+        "asset_flag" : false
+      }],
+      "project_long_title": "Beautiful Tools for your Journey",
+      "project_tags_human": [{
+        "url" : "interaction",
+        "text" : "Interaction"
+      },{
+        "url" : "identity",
+        "text" : "Identity"
+      },{
+        "url" : "featured",
+        "text" : "Featured"
+      }],
+      "project_disciplines_human": [{
+        "url" : "web",
+        "text" : "Web"
+      }],
+      "project_sectors_human": [{
+        "url" : "fashion",
+        "text" : "Fashion"
+      },{
+        "url" : "product",
+        "text" : "Product"
+      }],
+      "project_sections": [{
+        "section_type" : "section",
+        "section_url" : "top",
+        "section_title" : "top image",
+        "section_assets" : [{
+          "asset_id" : "ajoto-01",
+          "asset_width" : "1500",
+          "asset_height" : "844",
+          "asset_format" : "jpg",
+          "asset_type" : "image",
+          "asset_flag" : false
+        }],
+        "section_text" : null,
+        "section_template" : null,
+        "section_tags" : null,
+        "section_show_title" : false,
+        "section_iframe_url" : null,
+        "section_ratio" : 1,
+        "section_assets_count" : 1,
+        "section_templates" : {
+          "cycle" : false,
+          "fade" : false,
+          "auto": false,
+          "fast" : false,
+          "fill" : false
+        }
+      },{
+        "section_type" : "section",
+        "section_url" : "video",
+        "section_title" : "video",
+        "section_assets" : [{
+          "asset_id" : "making-of-pen",
+          "asset_width" : "1200",
+          "asset_height" : "674",
+          "asset_format" : "jpg",
+          "asset_type" : "vimeo",
+          "asset_vimeo" : "68227510",
+          "asset_flag" : false
+        }],
+        "section_text" : null,
+        "section_template" : null,
+        "section_tags" : null,
+        "section_show_title" : false,
+        "section_iframe_url" : null,
+        "section_ratio" : 1,
+        "section_assets_count" : 1,
+        "section_templates" : {
+          "cycle" : false,
+          "fade" : false,
+          "auto": false,
+          "fast" : false,
+          "fill" : false
+        }
+      },{
+        "section_type" : "section",
+        "section_url" : "moreimages",
+        "section_title" : "more images",
+        "section_assets" : [{
+          "asset_id" : "ajoto-02",
+          "asset_width" : "2400",
+          "asset_height" : "1600",
+          "asset_format" : "jpg",
+          "asset_type" : "image",
+          "asset_flag" : false
+        }],
+        "section_text" : null,
+        "section_template" : null,
+        "section_tags" : null,
+        "section_show_title" : false,
+        "section_iframe_url" : null,
+        "section_ratio" : 1,
+        "section_assets_count" : 1,
+        "section_templates" : {
+          "cycle" : false,
+          "fade" : false,
+          "auto": false,
+          "fast" : false,
+          "fill" : false
+        }
+      },{
+        "section_type": "section",
+        "section_url": "text",
+        "section_title": "Text",
+        "section_assets": [],
+        "section_text": "<p>At AJOTO we create beautiful tools for your journeys, combining the precision of modern manufacturing with the soul of craft. By carefully utilising new technologies we simplify the complex, reduce waste and create lasting experiences which grow with our customers.</p>",
+        "section_template": "",
+        "section_tags": null,
+        "section_show_title": true,
+        "section_iframe_url": null,
+        "section_iframe_ratio": 1,
+        "section_assets_count": null,
+        "section_templates": {
+          "cycle" : false,
+          "fade" : false,
+          "auto": false,
+          "fast" : false,
+          "fill" : false
+        }
+      }]
+    }
+  ]
+}

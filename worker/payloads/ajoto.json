@@ -60,7 +60,7 @@
           "asset_height" : "844",
           "asset_format" : "jpg",
           "asset_type" : "image",
-          "asset_flag" : false
+          "asset_flag" : true
         }],
         "section_text" : null,
         "section_template" : null,
@@ -82,8 +82,8 @@
         "section_title" : "video",
         "section_assets" : [{
           "asset_id" : "making-of-pen",
-          "asset_width" : "1200",
-          "asset_height" : "674",
+          "asset_width" : "1280",
+          "asset_height" : "720",
           "asset_format" : "jpg",
           "asset_type" : "vimeo",
           "asset_vimeo" : "68227510",
@@ -113,7 +113,7 @@
           "asset_height" : "1600",
           "asset_format" : "jpg",
           "asset_type" : "image",
-          "asset_flag" : false
+          "asset_flag" : true
         }],
         "section_text" : null,
         "section_template" : null,

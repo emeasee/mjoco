@@ -57,8 +57,8 @@ angular.module('mjocoApp')
         $scope.imageSettingsMid = '-w700-q50';
         $scope.imageSettingsMidBoost = '-w700-q50';
       } else {
-        $scope.imageSettingsMid = '-w1200-q90';
-        $scope.imageSettingsMidBoost = '-w1200-q95';
+        $scope.imageSettingsMid = '-w1200-q95';
+        $scope.imageSettingsMidBoost = '-w1200-q100';
       }
 
     });

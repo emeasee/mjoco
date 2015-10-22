@@ -61,15 +61,15 @@ angular.module('mjocoApp')
           $scope.imageSettingsMidBoost = '-w700-q50';
           $scope.imageSettingsLargeBoost = '-w700-q50';
         } else if ($rootScope.windowWidth < 1200) {
-          $scope.imageSettingsMid = '-w1200-q90';
-          $scope.imageSettingsLarge = '-w1400-q90';
-          $scope.imageSettingsMidBoost = '-w1200-q95';
-          $scope.imageSettingsLargeBoost = '-w1400-q95';
+          $scope.imageSettingsMid = '-w1200-q95';
+          $scope.imageSettingsLarge = '-w1400-q95';
+          $scope.imageSettingsMidBoost = '-w1200-q100';
+          $scope.imageSettingsLargeBoost = '-w1400-q100';
         } else {
-          $scope.imageSettingsMid = '-w1400-q90';
-          $scope.imageSettingsLarge = '-w1600-q90';
-          $scope.imageSettingsMidBoost = '-w1400-q95';
-          $scope.imageSettingsLargeBoost = '-w1600-q95';
+          $scope.imageSettingsMid = '-w1400-q95';
+          $scope.imageSettingsLarge = '-w1600-q95';
+          $scope.imageSettingsMidBoost = '-w1400-q100';
+          $scope.imageSettingsLargeBoost = '-w1600-q100';
         }
 
       });

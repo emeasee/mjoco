@@ -26,7 +26,7 @@
         "asset_height" : "720",
         "asset_format" : "jpg",
         "asset_type" : "video",
-        "asset_flag" : false
+        "asset_flag" : true
       }],
       "project_long_title": "Beautiful Tools for your Journey",
       "project_tags_human": [{
@@ -87,7 +87,7 @@
           "asset_format" : "jpg",
           "asset_type" : "vimeo",
           "asset_vimeo" : "68227510",
-          "asset_flag" : false
+          "asset_flag" : true
         }],
         "section_text" : null,
         "section_template" : null,

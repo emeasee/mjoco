@@ -134,8 +134,13 @@ projects.each{ |project|
 
   puts 'Processing project assets'
   # download and process imagery that has been flagged
+
+  project['project_assets'].each do |asset|
+    next unless asset['asset_flag']
+    process_image("#{asset['asset_id']}.#{asset['asset_format']}")
+  end
+
   project['project_sections'].each do |section|
-    next if section['section_type'] === 'video'
     section['section_assets'].each do |asset|
       next unless asset['asset_flag']
       process_image("#{asset['asset_id']}.#{asset['asset_format']}")

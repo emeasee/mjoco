@@ -208,7 +208,7 @@ Project.find({}).remove(function() {
       section_url : "video",
       section_title : "video",
       section_assets : [{
-        asset_id : "making-of-pen",
+        asset_id : "ajoto-04",
         asset_width : "1280",
         asset_height : "720",
         asset_format : "jpg",

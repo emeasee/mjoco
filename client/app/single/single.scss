@@ -34,6 +34,12 @@
     img, video{
       @include absfull();
     }
+    &.vimeo{
+      height:0;
+      iframe{
+        @include absfull();
+      }
+    }
   }
   &.browser{
     .assets-wrap{

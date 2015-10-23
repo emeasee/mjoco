@@ -204,6 +204,33 @@ Project.find({}).remove(function() {
         fade: false
       }
     },{
+      section_type : "section",
+      section_url : "video",
+      section_title : "video",
+      section_assets : [{
+        asset_id : "making-of-pen",
+        asset_width : "1280",
+        asset_height : "720",
+        asset_format : "jpg",
+        asset_type : "vimeo",
+        asset_vimeo : "68227510",
+        asset_flag : false
+      }],
+      section_text : null,
+      section_template : null,
+      section_tags : null,
+      section_show_title : false,
+      section_iframe_url : null,
+      section_ratio : 1,
+      section_assets_count : 1,
+      section_templates : {
+        cycle : false,
+        fade : false,
+        auto: false,
+        fast : false,
+        fill : false
+      }
+    },{
       section_type : 'section',
       section_url : 'text',
       section_title : 'text',

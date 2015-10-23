@@ -17,9 +17,9 @@
 <video ng-if="asset.asset_type === 'video' && !isMobile"
        loop
        muted
-       poster="http://{{bucketName}}/{{project.project_url}}-{{asset.asset_id}}{{asset.asset_format === 'jpg' && asset.asset_data_quality !== '1' ? imageSettingsMid : ''}}{{asset.asset_format === 'jpg' && asset.asset_data_quality === '1' ? imageSettingsMidBoost : ''}}.{{asset.asset_format}}"
+       poster="http://{{bucketName}}/{{asset.asset_id}}{{asset.asset_format === 'jpg' && asset.asset_data_quality !== '1' ? imageSettingsMid : ''}}{{asset.asset_format === 'jpg' && asset.asset_data_quality === '1' ? imageSettingsMidBoost : ''}}.{{asset.asset_format}}"
   >
-  <source type="video/mp4" ng-src="{{ 'http://' + bucketName +'/video/' + project.project_url + '_' + asset.asset_id + '.mp4' }}" />
-  <source type="video/webm" ng-src="{{ 'http://' + bucketName +'/video/' + project.project_url + '_' + asset.asset_id + '.webm' }}" />
-  <source type="video/ogg" ng-src="{{ 'http://' + bucketName +'/video/' + project.project_url + '_' + asset.asset_id + '.ogg' }}" />
+  <source type="video/mp4" ng-src="{{ 'http://' + bucketName +'/video/' +  asset.asset_id + '_video.mp4' }}" />
+  <source type="video/webm" ng-src="{{ 'http://' + bucketName +'/video/' +  asset.asset_id + '_video.webm' }}" />
+  <source type="video/ogg" ng-src="{{ 'http://' + bucketName +'/video/' +  asset.asset_id + '_video.ogg' }}" />
 </video>

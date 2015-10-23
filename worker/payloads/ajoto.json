@@ -21,7 +21,7 @@
       "project_colour": "charcoal",
       "project_background": "off-white",
       "project_assets": [{
-        "asset_id" : "video",
+        "asset_id" : "ajoto-04",
         "asset_width" : "1280",
         "asset_height" : "720",
         "asset_format" : "jpg",
@@ -60,7 +60,7 @@
           "asset_height" : "844",
           "asset_format" : "jpg",
           "asset_type" : "image",
-          "asset_flag" : true
+          "asset_flag" : false
         }],
         "section_text" : null,
         "section_template" : null,
@@ -81,7 +81,7 @@
         "section_url" : "video",
         "section_title" : "video",
         "section_assets" : [{
-          "asset_id" : "making-of-pen",
+          "asset_id" : "ajoto-03",
           "asset_width" : "1280",
           "asset_height" : "720",
           "asset_format" : "jpg",
@@ -109,11 +109,11 @@
         "section_title" : "more images",
         "section_assets" : [{
           "asset_id" : "ajoto-02",
-          "asset_width" : "2400",
-          "asset_height" : "1600",
+          "asset_width" : "1500",
+          "asset_height" : "4559",
           "asset_format" : "jpg",
           "asset_type" : "image",
-          "asset_flag" : true
+          "asset_flag" : false
         }],
         "section_text" : null,
         "section_template" : null,

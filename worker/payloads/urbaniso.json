@@ -1,34 +1,34 @@
 {
   "projects": [
     {
-	    "project_id": "02",
-      "project_url": "ajoto",
-      "project_client": "AJOTO Ltd.",
-      "project_title": "AJOTO",
-      "project_text": "Beautiful Tools for your Journey",
-      "project_year": "2014",
-      "project_template": "",
+	    "project_id": "03",
+      "project_url": "urbaniso",
+      "project_client": "COSM Ltd. (now Xively.com)",
+      "project_title": "Urban ISO",
+      "project_text": "Open Sensor Access",
+      "project_year": "2011",
+      "project_template": "fill",
       "project_templates": {
         "cycle": false,
         "auto": false,
         "fast": false,
         "fade": false,
-        "fill": false
+        "fill": true
       },
       "project_collaborator": null,
-      "project_external_url": "www.ajoto.com",
-      "project_tags": ["interaction","identity","featured"],
+      "project_external_url": null,
+      "project_tags": ["interaction","identity","art-direction","featured"],
       "project_colour": "charcoal",
-      "project_background": "off-white",
+      "project_background": "white",
       "project_assets": [{
-        "asset_id" : "ajoto-04",
-        "asset_width" : "1280",
-        "asset_height" : "720",
+        "asset_id" : "urbaniso-01",
+        "asset_width" : "2400",
+        "asset_height" : "1600",
         "asset_format" : "jpg",
-        "asset_type" : "video",
-        "asset_flag" : false
+        "asset_type" : "image",
+        "asset_flag" : true
       }],
-      "project_long_title": "Beautiful Tools for your Journey",
+      "project_long_title": "Proposal and concept for an open sensor data access platform.",
       "project_tags_human": [{
         "url" : "interaction",
         "text" : "Interaction"
@@ -38,18 +38,19 @@
       },{
         "url" : "featured",
         "text" : "Featured"
+      },{
+        "url" : "art-direction",
+        "text" : "Art Direction"
       }],
       "project_disciplines_human": [{
-        "url" : "web",
-        "text" : "Web"
+        "url" : "mobile",
+        "text" : "Mobile"
       }],
       "project_sectors_human": [{
-        "url" : "fashion",
-        "text" : "Fashion"
-      },{
-        "url" : "product",
-        "text" : "Product"
+        "url" : "iot",
+        "text" : "Internet of Things"
       }],
+      //TODO: Finish urbaniso payload
       "project_sections": [{
         "section_type" : "section",
         "section_url" : "top",

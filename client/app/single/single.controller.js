@@ -116,7 +116,7 @@ angular.module('mjocoApp')
 
       $rootScope.pageTitle = $scope.project.project_title;
 
-      $rootScope.textColor =  $scope.project.project_color+'-text';
+      $rootScope.textColor =  $scope.project.project_colour+'-text';
       $rootScope.backgroundColor =  $scope.project.project_background+'-background';
 
 

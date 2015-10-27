@@ -11,6 +11,7 @@ var ProjectSchema = new Schema({
   project_text: String,
   project_year: String,
   project_collaborator: String,
+  project_template: String,
   project_templates: {
     cycle: Boolean,
     auto: Boolean,

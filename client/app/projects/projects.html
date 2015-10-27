@@ -17,9 +17,6 @@
 
                 <div ng-if="project.project_templates.fill" class="asset-background" ng-attr-style="background-image: url(http://{{bucketName}}/{{asset.asset_id}}{{asset.asset_format === 'jpg' && asset.asset_data_quality !== '1' ? imageSettingsLarge : ''}}{{asset.asset_format === 'jpg' && asset.asset_data_quality === '1' ? imageSettingsLargeBoost : ''}}.{{asset.asset_format}})"></div>
 
-                <div ng-if="project.project_templates.fill" class="asset">
-                  <img ng-src="http://{{bucketName}}/{{asset.asset_id}}{{asset.asset_format === 'jpg' && asset.asset_data_quality !== '1' ? imageSettingsLarge : ''}}{{asset.asset_format === 'jpg' && asset.asset_data_quality === '1' ? imageSettingsLargeBoost : ''}}.{{asset.asset_format}}" />
-                </div>
               </div>
             </div>
           </div>

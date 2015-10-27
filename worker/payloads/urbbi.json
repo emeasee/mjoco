@@ -17,7 +17,7 @@
       },
       "project_collaborator": null,
       "project_external_url": null,
-      "project_tags": ["interaction","art-direction","video","user-interface","featured"],
+      "project_tags": ["interaction","art_direction","video","user_interface","featured"],
       "project_colour": "white",
       "project_background": "charcoal",
       "project_assets": [{
@@ -33,10 +33,13 @@
         "url" : "interaction",
         "text" : "Interaction"
       },{
+        "url" : "art_direction",
+        "text" : "Art Direction"
+      },{
         "url" : "featured",
         "text" : "Featured"
       },{
-        "url" : "user-interface",
+        "url" : "user_interface",
         "text" : "User Interface"
       },{
         "url" : "video",

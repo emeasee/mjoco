@@ -13,7 +13,7 @@
       },
       "project_collaborator": null,
       "project_external_url": null,
-      "project_tags": ["interaction","art-direction", "video","featured"],
+      "project_tags": ["interaction","art_direction", "video","featured"],
       "project_colour": "charcoal",
       "project_background": "off-white",
       "project_assets": [{
@@ -35,7 +35,7 @@
         "url" : "featured",
         "text" : "Featured"
       },{
-        "url" : "art-direction",
+        "url" : "art_direction",
         "text" : "Art Direction"
       }],
       "project_disciplines_human": [{
@@ -48,33 +48,6 @@
       }],
       "project_sections": [{
         "section_type" : "section",
-        "section_url" : "video",
-        "section_title" : "video",
-        "section_assets" : [{
-          "asset_id" : "mrd-02",
-          "asset_width" : "1280",
-          "asset_height" : "720",
-          "asset_format" : "jpg",
-          "asset_type" : "vimeo",
-          "asset_vimeo" : "22597868",
-          "asset_flag" : true
-        }],
-        "section_text" : null,
-        "section_template" : null,
-        "section_tags" : null,
-        "section_show_title" : false,
-        "section_iframe_url" : null,
-        "section_ratio" : 1,
-        "section_assets_count" : 1,
-        "section_templates" : {
-          "cycle" : false,
-          "fade" : false,
-          "auto": false,
-          "fast" : false,
-          "fill" : false
-        }
-      },{
-        "section_type" : "section",
         "section_url" : "cycle",
         "section_title" : "cycle",
         "section_assets" : [{
@@ -83,21 +56,21 @@
           "asset_height" : "1600",
           "asset_format" : "jpg",
           "asset_type" : "image",
-          "asset_flag" : true
+          "asset_flag" : false
         },{
           "asset_id" : "mrd-04",
           "asset_width" : "2400",
           "asset_height" : "1600",
           "asset_format" : "jpg",
           "asset_type" : "image",
-          "asset_flag" : true
+          "asset_flag" : false
         },{
           "asset_id" : "mrd-05",
           "asset_width" : "2400",
           "asset_height" : "1600",
           "asset_format" : "jpg",
           "asset_type" : "image",
-          "asset_flag" : true
+          "asset_flag" : false
         },{
           "asset_id" : "mrd-01",
           "asset_width" : "2400",
@@ -121,12 +94,39 @@
           "fill" : false
         }
       },{
+        "section_type" : "section",
+        "section_url" : "video",
+        "section_title" : "video",
+        "section_assets" : [{
+          "asset_id" : "mrd-02",
+          "asset_width" : "1280",
+          "asset_height" : "720",
+          "asset_format" : "jpg",
+          "asset_type" : "vimeo",
+          "asset_vimeo" : "22597868",
+          "asset_flag" : false
+        }],
+        "section_text" : null,
+        "section_template" : null,
+        "section_tags" : null,
+        "section_show_title" : false,
+        "section_iframe_url" : null,
+        "section_ratio" : 1,
+        "section_assets_count" : 1,
+        "section_templates" : {
+          "cycle" : false,
+          "fade" : false,
+          "auto": false,
+          "fast" : false,
+          "fill" : false
+        }
+      },{
         "section_type": "section",
         "section_url": "text",
         "section_title": "Text",
         "section_assets": [],
-        "section_text": "",
-        "section_template": "<p>The Mass Responsive Device is a generative experiment into the relationship that we have with the way in which we organise our data. Our relationship with our data and how we keep them organised on your digital storage devices reflects our personality in the same way having a clean or messy desk may reflect this also.<br/><br/>To highlight this intriguing parallel the Mass Responsive Device was developed to create a unique, one of kind graphic representation of any storage device plugged into it, producing a snapshot of it's contents all on one A4 page. The device reads raw data from text files, image files and even code and responds in a way that reflects the way you have organised the information in the storage device's file structure, the time of day used, and even the amount of times the experiment has been used.</p>",
+        "section_text": "<p>The Mass Responsive Device is a generative experiment into the relationship that we have with the way in which we organise our data. Our relationship with our data and how we keep them organised on your digital storage devices reflects our personality in the same way having a clean or messy desk may reflect this also.<br/><br/>To highlight this intriguing parallel the Mass Responsive Device was developed to create a unique, one of kind graphic representation of any storage device plugged into it, producing a snapshot of it's contents all on one A4 page. The device reads raw data from text files, image files and even code and responds in a way that reflects the way you have organised the information in the storage device's file structure, the time of day used, and even the amount of times the experiment has been used.</p>",
+        "section_template": "",
         "section_tags": null,
         "section_show_title": true,
         "section_iframe_url": null,

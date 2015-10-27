@@ -13,7 +13,7 @@
       },
       "project_collaborator": "Joshua Noble, Usman Haque",
       "project_external_url": null,
-      "project_tags": ["interaction","identity","art-direction","featured"],
+      "project_tags": ["interaction","identity","art_direction","featured"],
       "project_colour": "charcoal",
       "project_background": "white",
       "project_assets": [{
@@ -35,7 +35,7 @@
         "url" : "featured",
         "text" : "Featured"
       },{
-        "url" : "art-direction",
+        "url" : "art_direction",
         "text" : "Art Direction"
       }],
       "project_disciplines_human": [{

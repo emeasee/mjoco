@@ -85,7 +85,6 @@ angular.module('mjocoApp')
           setTimeout(function(){
             $scope.$apply(function(){
               $rootScope.isMobile = newIsMobile;
-              $log.debug('resize!');
             });
           });
         }

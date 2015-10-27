@@ -26,8 +26,9 @@
   </head>
 
   <body class="{{ stateID }} {{ backgroundColor }} {{ textColor }} {{ bodyHeaderClass }}"
-        ng-class="{ 'mobile': isMobile, 'not-mobile': !isMobile, 'portrait': isPortrait, 'landscape': !isPortrait }"
         ng-init="$root.bucketName='s3-eu-west-1.amazonaws.com/mjoco'; $root.slug='portfolio'; $root.strapline='Mult-disciplinary Designer based in Paris'; $root.landingdescription='Mac Oosthuizen is a Mult-disciplinary Designer based in Paris focused on improving the world through human-centered research, product focused development and innovation.';">
+
+    <div ng-class="{ 'mobile': isMobile, 'not-mobile': !isMobile, 'portrait': isPortrait, 'landscape': !isPortrait }">
 
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -154,5 +155,6 @@
           <script src="components/socket/socket.service.js"></script>
           <!-- endinjector -->
         <!-- endbuild -->
+  </div>
 </body>
 </html>

@@ -11,26 +11,26 @@
       "project_templates": {
         "fill": true
       },
-      "project_collaborator": "Joshua Noble, Usman Haque",
+      "project_collaborator": null,
       "project_external_url": null,
-      "project_tags": ["interaction","identity","art-direction","featured"],
+      "project_tags": ["interaction","art-direction", "video","featured"],
       "project_colour": "charcoal",
-      "project_background": "white",
+      "project_background": "off-white",
       "project_assets": [{
-        "asset_id" : "urbaniso-01",
+        "asset_id" : "mrd-01",
         "asset_width" : "2400",
         "asset_height" : "1600",
         "asset_format" : "jpg",
         "asset_type" : "image",
-        "asset_flag" : false
+        "asset_flag" : true
       }],
-      "project_long_title": "Proposal and concept for an open sensor data access platform.",
+      "project_long_title": "Dynamic Layout processor that responds to data from an external device by printing out a composition.",
       "project_tags_human": [{
         "url" : "interaction",
         "text" : "Interaction"
       },{
-        "url" : "identity",
-        "text" : "Identity"
+        "url" : "video",
+        "text" : "Video"
       },{
         "url" : "featured",
         "text" : "Featured"
@@ -39,99 +39,25 @@
         "text" : "Art Direction"
       }],
       "project_disciplines_human": [{
-        "url" : "mobile",
-        "text" : "Mobile"
+        "url" : "code",
+        "text" : "Code"
       }],
       "project_sectors_human": [{
-        "url" : "iot",
-        "text" : "Internet of Things"
+        "url" : "art",
+        "text" : "Art"
       }],
       "project_sections": [{
         "section_type" : "section",
-        "section_url" : "top",
-        "section_title" : "top cycle",
+        "section_url" : "video",
+        "section_title" : "video",
         "section_assets" : [{
-          "asset_id" : "urbaniso-02",
-          "asset_width" : "2400",
-          "asset_height" : "1600",
+          "asset_id" : "mrd-02",
+          "asset_width" : "1280",
+          "asset_height" : "720",
           "asset_format" : "jpg",
-          "asset_type" : "image",
-          "asset_flag" : false
-        },{
-          "asset_id" : "urbaniso-03",
-          "asset_width" : "2400",
-          "asset_height" : "1600",
-          "asset_format" : "jpg",
-          "asset_type" : "image",
-          "asset_flag" : false
-        },{
-          "asset_id" : "urbaniso-04",
-          "asset_width" : "2400",
-          "asset_height" : "1600",
-          "asset_format" : "jpg",
-          "asset_type" : "image",
-          "asset_flag" : false
-        },{
-          "asset_id" : "urbaniso-05",
-          "asset_width" : "2400",
-          "asset_height" : "1600",
-          "asset_format" : "jpg",
-          "asset_type" : "image",
-          "asset_flag" : false
-        },{
-          "asset_id" : "urbaniso-06",
-          "asset_width" : "2400",
-          "asset_height" : "1600",
-          "asset_format" : "jpg",
-          "asset_type" : "image",
-          "asset_flag" : false
-        },{
-          "asset_id" : "urbaniso-07",
-          "asset_width" : "2400",
-          "asset_height" : "1600",
-          "asset_format" : "jpg",
-          "asset_type" : "image",
-          "asset_flag" : false
-        },{
-          "asset_id" : "urbaniso-08",
-          "asset_width" : "2400",
-          "asset_height" : "1600",
-          "asset_format" : "jpg",
-          "asset_type" : "image",
-          "asset_flag" : false
-        }],
-        "section_text" : null,
-        "section_template" : "cycle auto fade",
-        "section_tags" : null,
-        "section_show_title" : false,
-        "section_iframe_url" : null,
-        "section_ratio" : 1,
-        "section_assets_count" : 7,
-        "section_templates" : {
-          "cycle" : true,
-          "fade" : true,
-          "auto": true,
-          "fast" : false,
-          "fill" : false
-        }
-      },{
-        "section_type" : "section",
-        "section_url" : "moreimages",
-        "section_title" : "more images",
-        "section_assets" : [{
-          "asset_id" : "urbaniso-09",
-          "asset_width" : "2400",
-          "asset_height" : "1600",
-          "asset_format" : "jpg",
-          "asset_type" : "image",
-          "asset_flag" : false
-        },{
-          "asset_id" : "urbaniso-10",
-          "asset_width" : "2400",
-          "asset_height" : "3445",
-          "asset_format" : "jpg",
-          "asset_type" : "image",
-          "asset_flag" : false
+          "asset_type" : "vimeo",
+          "asset_vimeo" : "22597868",
+          "asset_flag" : true
         }],
         "section_text" : null,
         "section_template" : null,
@@ -148,12 +74,59 @@
           "fill" : false
         }
       },{
+        "section_type" : "section",
+        "section_url" : "cycle",
+        "section_title" : "cycle",
+        "section_assets" : [{
+          "asset_id" : "mrd-03",
+          "asset_width" : "2400",
+          "asset_height" : "1600",
+          "asset_format" : "jpg",
+          "asset_type" : "image",
+          "asset_flag" : true
+        },{
+          "asset_id" : "mrd-04",
+          "asset_width" : "2400",
+          "asset_height" : "1600",
+          "asset_format" : "jpg",
+          "asset_type" : "image",
+          "asset_flag" : true
+        },{
+          "asset_id" : "mrd-05",
+          "asset_width" : "2400",
+          "asset_height" : "1600",
+          "asset_format" : "jpg",
+          "asset_type" : "image",
+          "asset_flag" : true
+        },{
+          "asset_id" : "mrd-01",
+          "asset_width" : "2400",
+          "asset_height" : "1600",
+          "asset_format" : "jpg",
+          "asset_type" : "image",
+          "asset_flag" : false
+        }],
+        "section_text" : null,
+        "section_template" : "cycle auto fade",
+        "section_tags" : null,
+        "section_show_title" : false,
+        "section_iframe_url" : null,
+        "section_ratio" : 1,
+        "section_assets_count" : 4,
+        "section_templates" : {
+          "cycle" : true,
+          "fade" : true,
+          "auto": true,
+          "fast" : false,
+          "fill" : false
+        }
+      },{
         "section_type": "section",
         "section_url": "text",
         "section_title": "Text",
         "section_assets": [],
-        "section_text": "<p>This project in collaboration with JOSHUA NOBLE was proposal for an ISO standard that applies to the tagging, classifying and providing access to anonymous urban sensors. We intentionally took a 'top-down' approach with interest in involving local government and city regulators.<br><br>We were happy to continue the project with Usman Haque of Cosm (now Xively.com), researching new ways to access & express data in our urban landscapes</p>",
-        "section_template": "",
+        "section_text": "",
+        "section_template": "<p>The Mass Responsive Device is a generative experiment into the relationship that we have with the way in which we organise our data. Our relationship with our data and how we keep them organised on your digital storage devices reflects our personality in the same way having a clean or messy desk may reflect this also.<br/><br/>To highlight this intriguing parallel the Mass Responsive Device was developed to create a unique, one of kind graphic representation of any storage device plugged into it, producing a snapshot of it's contents all on one A4 page. The device reads raw data from text files, image files and even code and responds in a way that reflects the way you have organised the information in the storage device's file structure, the time of day used, and even the amount of times the experiment has been used.</p>",
         "section_tags": null,
         "section_show_title": true,
         "section_iframe_url": null,

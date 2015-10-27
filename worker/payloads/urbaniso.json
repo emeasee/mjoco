@@ -49,7 +49,7 @@
       "project_sections": [{
         "section_type" : "section",
         "section_url" : "top",
-        "section_title" : "top cycle",
+        "section_title" : "hero icon",
         "section_assets" : [{
           "asset_id" : "urbaniso-02",
           "asset_width" : "2400",
@@ -57,7 +57,26 @@
           "asset_format" : "jpg",
           "asset_type" : "image",
           "asset_flag" : false
-        },{
+        }],
+        "section_text" : null,
+        "section_template" : null,
+        "section_tags" : null,
+        "section_show_title" : false,
+        "section_iframe_url" : null,
+        "section_ratio" : 1,
+        "section_assets_count" : 1,
+        "section_templates" : {
+          "cycle" : false,
+          "fade" : false,
+          "auto": false,
+          "fast" : false,
+          "fill" : false
+        }
+      },{
+        "section_type" : "section",
+        "section_url" : "cycle",
+        "section_title" : "cycle",
+        "section_assets" : [{
           "asset_id" : "urbaniso-03",
           "asset_width" : "2400",
           "asset_height" : "1600",

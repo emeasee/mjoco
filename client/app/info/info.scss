@@ -42,7 +42,7 @@ $max-width: 70rem;
   margin: auto;
   padding: 1.5rem;
   p {
-    @include smart-underline($blue, $white, $dark-gray, 100%, 1px);
+    @include smart-underline($red, $white, $dark-gray, 100%, 1px);
     font-size: 1.6em;
     line-height:130%;
   }
@@ -74,11 +74,11 @@ $max-width: 70rem;
       text-align:center;
       font-size:2.8em;
       margin-bottom:2rem;
-      @include smart-underline($blue, $white, $dark-gray, 100%, 2px);
+      @include smart-underline($red, $white, $dark-gray, 100%, 2px);
     }
   }
   .contact {
-    @include smart-underline($blue, $white, $dark-gray, 100%);
+    @include smart-underline($red, $white, $dark-gray, 100%);
     span{
       display:inline;
     }

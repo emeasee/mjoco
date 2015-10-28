@@ -20,8 +20,10 @@ exports.index = function(req, res) {
       projects.forEach (function(project, index) {
         delete projects[index]._doc.project_sections;
       });
+      return res.status(200).json({tags: [resTags], projects: projects});
+    } else {
+      return res.status(200).json({tags: [resTags], projects: null});
     }
-    return res.status(200).json({tags: [resTags], projects: projects});
   });
 };
 

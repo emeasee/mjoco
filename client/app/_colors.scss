@@ -118,28 +118,28 @@
   // 	}
 }
 
-@include keyframes(blueshift){
+@include keyframes(redshift){
   0%{
-    background:#2e00ee;
+    background: #ee002e;
 
   }
   16%{
-    background:#0022ee;
+    background: #ee2200;
   }
   32%{
-    background:#003cf5;
+    background: #f53c00;
   }
   50%{
-    background:#0025c5;
+    background: #c52500;
   }
   66%{
-    background:#003cf5;
+    background: #f53c00;
   }
   82%{
-    background:#0022ee;
+    background: #ee2200;
   }
   100%{
-    background:#2e00ee;
+    background: #ee002e;
   }
 }
 
@@ -209,5 +209,16 @@
   }
   ::-webkit-scrollbar-thumb {
     background: lighten($charcoal, 10%);
+  }
+}
+
+.red-background{
+  background: $red;
+  @include browser($white);
+  ::-webkit-scrollbar-track {
+    background: darken($red, 10%);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: lighten($red, 10%);
   }
 }

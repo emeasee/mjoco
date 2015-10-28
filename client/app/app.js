@@ -40,6 +40,8 @@ angular.module('mjocoApp', [
         }
       ]);
 
+      $urlRouterProvider.otherwise('/404/');
+
       $urlRouterProvider.rule(function($injector, $location) {
         var path = $location.path(),
           search = $location.search();
@@ -55,8 +57,6 @@ angular.module('mjocoApp', [
           }
         }
       });
-
-      $urlRouterProvider.otherwise('/404/');
 
       $stateProvider.state('blank', {});
       $stateProvider.state('main', {});

@@ -16,6 +16,8 @@
       "project_tags": ["interaction","art_direction", "video","featured"],
       "project_colour": "charcoal",
       "project_background": "off-white",
+      "cover_colour":"white",
+      "cover_background":"off-white",
       "project_assets": [{
         "asset_id" : "mrd-01",
         "asset_width" : "2400",

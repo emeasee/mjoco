@@ -21,6 +21,8 @@ var ProjectSchema = new Schema({
   },
   project_external_url: String,
   project_tags: [String],
+  cover_colour: String,
+  cover_background: String,
   project_colour: String,
   project_background: String,
   project_assets: [{

@@ -41,6 +41,8 @@ Project.find({}).remove(function() {
     project_tags: ['featured','user_interface'],
     project_colour: 'charcoal',
     project_background: 'off-white',
+    cover_colour: 'white',
+    cover_background: 'charcoal',
     project_assets: [{
       asset_id : 'fieldlogs-01',
       asset_width : '2800',

@@ -20,6 +20,8 @@
       "project_tags": ["interaction","art_direction","video","user_interface","featured"],
       "project_colour": "white",
       "project_background": "charcoal",
+      "cover_colour":"white",
+      "cover_background":"charcoal",
       "project_assets": [{
         "asset_id" : "urbbi-01",
         "asset_width" : "1500",

@@ -13,11 +13,11 @@ angular.module('mjocoApp')
       var tags = projectsData.tags;
       tags = tags.join('/');
 
-      $log.debug('Projects', $scope.projects);
+      //$log.debug('Projects', $scope.projects);
 
       $scope.currentPath = $location.path();
 
-      $log.debug('location', $location);
+      //$log.debug('location', $location);
 
       var indexRef = $location.path();
 
@@ -27,7 +27,7 @@ angular.module('mjocoApp')
         $scope.startElement = 0;
       }
 
-      $log.debug('startElement', $scope.startElement);
+      //$log.debug('startElement', $scope.startElement);
 
       localStorageService.remove('fromProjects');
 
@@ -87,7 +87,7 @@ angular.module('mjocoApp')
         if (url.indexOf(projectUrl) < 0) {
           url = url + projectUrl;
         }
-        $log.debug('click to ' + url);
+        //$log.debug('click to ' + url);
         $location.path(url);
         $scope.$apply();
       });
@@ -96,8 +96,8 @@ angular.module('mjocoApp')
         setTimeout(function() {
           $rootScope.secondary.text = $scope.projects[i].project_title;
           $rootScope.secondary.url = $scope.projects[i].project_url;
-          $rootScope.textColor = $scope.projects[i].project_colour + '-text';
-          $rootScope.backgroundColor = $scope.projects[i].project_background + '-background';
+          $rootScope.textColor = $scope.projects[i].cover_colour + '-text';
+          $rootScope.backgroundColor = $scope.projects[i].cover_background + '-background';
           $scope.$apply();
         }, 1);
       };

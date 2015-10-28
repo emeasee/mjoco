@@ -16,6 +16,8 @@
       "project_tags": ["interaction","identity","art_direction","featured"],
       "project_colour": "charcoal",
       "project_background": "white",
+      "cover_colour":"white",
+      "cover_background":"off-white",
       "project_assets": [{
         "asset_id" : "urbaniso-01",
         "asset_width" : "2400",

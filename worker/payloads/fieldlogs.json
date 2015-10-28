@@ -20,6 +20,8 @@
       "project_tags": ["user_interface","identity","featured"],
       "project_colour": "charcoal",
       "project_background": "off-white",
+      "cover_colour":"charcoal",
+      "cover_background":"off-white",
       "project_assets": [{
         "asset_id" : "fieldlogs-01",
         "asset_width" : "2400",

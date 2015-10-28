@@ -21,7 +21,7 @@
       "project_colour": "charcoal",
       "project_background": "off-white",
       "cover_colour":"charcoal",
-      "cover_background":"off-white",
+      "cover_background":"white",
       "project_assets": [{
         "asset_id" : "ajoto-04",
         "asset_width" : "1280",

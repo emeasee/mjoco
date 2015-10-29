@@ -117,38 +117,3 @@ $max-width: 70rem;
     }
   }
 }
-
-.contact-subscribe{
-  padding-bottom:0 !important;
-  form{
-  }
-  input, button{
-    border: 1px solid $white;
-    background: transparent;
-    padding: 0.3rem 0.5rem;
-    height:2.2rem;
-    vertical-align: middle;
-  }
-  input{
-    width:10rem;
-  }
-  .contact-subscribe-button{
-    text-decoration: underline;
-    cursor:pointer;
-  }
-  .contact-subscribe-form{
-    display:none;
-    opacity:0;
-    @include transition(opacity 0.5s);
-  }
-}
-.contact-subscribe-open{
-  .contact-subscribe-button{
-    display:none;
-    opacity:0;
-  }
-  .contact-subscribe-form{
-    opacity:1;
-    display: inline-block;
-  }
-}

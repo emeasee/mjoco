@@ -4,7 +4,17 @@ var _ = require('lodash');
 var Project = require('./project.model');
 
 // Get list of projects
-exports.index = function(req, res) {
+exports.index = function (req, res) {
+  Project.find(function(err, projects){
+    if(err) { return handleError(res, err); }
+    if(!projects) { return res.status(404).send('No Projects'); }
+
+    return res.status(200).json({projects: projects});
+  });
+};
+
+// Get list of projects filtered by tag
+exports.filter = function(req, res) {
   Project.find({ project_tags : req.query.tags }, function (err, projects) {
     if(err) { return handleError(res, err); }
     var resTags = null;

@@ -1,0 +1,86 @@
+.archive-wrap{
+  height:100%;
+  width:100%;
+  overflow-y: scroll;
+}
+.archive {
+  max-width: 80em;
+  margin: 6rem auto 3rem auto;
+  padding: 0 1em;
+  &:hover {
+    .disciplines a, .tags a, .year a {
+      opacity: 0.3;
+      @include transition(opacity 0.3s $cubic);
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+}
+.archive-project {
+  width: 100%;
+  border-top: 1px solid $light-gray;
+  position: relative;
+  // margin-left: -0.5rem;
+  // margin-right: -0.5rem;
+  // font-size: 80%;
+  @include clearfix;
+  &:first-child {
+    border: none;
+  }
+  .title, .year, .disciplines a, .tags a {
+    &:hover {
+      background: $black;
+      color: #fff;
+      a {
+        color: #fff;
+      }
+    }
+  }
+  &:hover {
+    a {
+      opacity: 1;
+    }
+    // .asset{
+    // 	opacity:1;
+    // }
+  }
+  a {
+    padding: 0.5rem;
+    display: block;
+  }
+  div {
+    float: left;
+  }
+  .title a {
+    width: 40rem;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    height:2.5rem;
+  }
+  .year a {
+    min-width: 3.6rem;
+  }
+  .tags {
+    min-width: 14rem;
+  }
+  .year, .disciplines, .tags {
+    & > div {
+      border-left: 1px solid $light-gray;
+    }
+    a {}
+  }
+  .text {
+    display: none;
+  }
+  .asset{
+    position: absolute;
+    top: 0;
+    right:0;
+    opacity:0;
+    z-index:99;
+    margin-bottom:2rem;
+    width:20rem;
+    display:none;
+  }
+}

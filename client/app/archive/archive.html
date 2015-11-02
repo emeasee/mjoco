@@ -1,3 +1,31 @@
-<div class="col-md-12">
-This is the archive view.
+<div class="archive-wrap">
+  <div class="archive ">
+
+    <div ng-repeat="project in projects" class="archive-project ng-wait-for-images loading {{ project.project_template }} ">
+
+      <div class="title">
+        <div>
+          <a href="/projects/archive/{{ project.project_url }}">{{ project.project_title }}</a>
+        </div>
+      </div>
+      <div class="year">
+        <div>
+          <a ng-mouseenter="archiveHover(project.project_year)" ng-mouseleave="archiveLeave()"  href="/projects/{{ project.project_year }}" class="{{ project.project_year }}" ng-class="archiveActive(project.project_year)">{{ project.project_year }}</a>
+        </div>
+      </div>
+      <div class="disciplines">
+        <div ng-repeat="discipline in project.project_disciplines_human">
+          <a ng-mouseenter="archiveHover(discipline.url)" ng-mouseleave="archiveLeave()" href="/projects/{{ discipline.url }}" class="{{discipline.url}}" ng-class="archiveActive(discipline.url)">{{ discipline.text }}</a>
+        </div>
+      </div>
+      <div class="tags">
+        <div ng-repeat="sector in project.project_sectors_human">
+          <a ng-mouseenter="archiveHover(sector.url)" ng-mouseleave="archiveLeave()"  href="/projects/{{ sector.url }}" class="{{sector.url}}" ng-class="archiveActive(sector.url)">{{ sector.text }}</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
 </div>

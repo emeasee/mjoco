@@ -16,7 +16,15 @@ Cover.find({}).remove(function() {
     data_url: '\/assets\/vitals\/heart\/',
     data_requirements: ['webgl'],
     data_colour: 'black',
-    data_background: 'white'
+    data_background: 'white',
+    assets: [{
+      asset_id: "heart",
+      asset_width: "700",
+      asset_height: "700",
+      asset_format: "jpg",
+      asset_type: "video",
+      asset_flag: false
+    }]
   });
 });
 

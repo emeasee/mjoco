@@ -1,3 +1,25 @@
-<div class="col-md-12">
-This is the vitals view.
+<div class="vitals black-background white-text">
+  <div class="vitals-vitals">
+    <div class="vitals-images">
+      <div ng-repeat="vital in vitals.vitals" class="vitals-vital">
+        <div>
+          <a href="/vitals/{{ vital.url }}">
+            <div ng-repeat="asset in vital.assets" class="assets">
+              <div class="asset {{ asset.asset_type }}" data-ratio="{{ asset.asset_width/asset.asset_height }}">
+                <img
+                  ng-hide="!isMobile"
+                  ng-src="http://{{bucketName}}/vitals/{{asset.asset_id}}{{asset.asset_format === 'jpg' && asset.asset_data_quality !== '1' ? imageSettingsMid : ''}}{{asset.asset_format === 'jpg' && asset.asset_data_quality === '1' ? imageSettingsMidBoost : ''}}.{{asset.asset_format}}"/>
+
+                <video ng-if="!isMobile" loop muted autoplay>
+                  <source type="video/mp4" ng-src="{{ 'http://' + bucketName +'/video/' +  asset.asset_id + '_video.mp4' }}" />
+                  <source type="video/webm" ng-src="{{ 'http://' + bucketName +'/video/' +  asset.asset_id + '_video.webm' }}" />
+                  <source type="video/ogg" ng-src="{{ 'http://' + bucketName +'/video/' +  asset.asset_id + '_video.ogg' }}" />
+                </video>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

@@ -7,7 +7,7 @@ var Vital = require('./vital.model');
 exports.index = function(req, res) {
   Vital.find(function (err, vitals) {
     if(err) { return handleError(res, err); }
-    return res.status(200).json(vitals);
+    return res.status(200).json({vitals: vitals});
   });
 };
 
@@ -31,10 +31,10 @@ exports.create = function(req, res) {
 // Updates an existing vital in the DB.
 exports.update = function(req, res) {
   if(req.body._id) { delete req.body._id; }
-  Vital.findById(req.params.id, function (err, vital) {
+  Vital.findOne({ url : req.params.url }, function (err, vital) {
     if (err) { return handleError(res, err); }
     if(!vital) { return res.status(404).send('Not Found'); }
-    var updated = _.merge(vital, req.body);
+    var updated = _.extend(vital, req.body);
     updated.save(function (err) {
       if (err) { return handleError(res, err); }
       return res.status(200).json(vital);
@@ -44,7 +44,7 @@ exports.update = function(req, res) {
 
 // Deletes a vital from the DB.
 exports.destroy = function(req, res) {
-  Vital.findById(req.params.id, function (err, vital) {
+  Vital.findOne({ url : req.params.url }, function (err, vital) {
     if(err) { return handleError(res, err); }
     if(!vital) { return res.status(404).send('Not Found'); }
     vital.remove(function(err) {

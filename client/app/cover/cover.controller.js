@@ -4,7 +4,7 @@ angular.module('mjocoApp')
   .controller('CoverCtrl', ['$rootScope', '$scope', '$location', '$log', 'coversData', 'localStorageService',
     function ($rootScope, $scope, $location, $log, coversData, localStorageService) {
 
-      var covers = coversData;
+      var covers = coversData.vitals;
       var index;
       var imageID;
 
@@ -41,13 +41,13 @@ angular.module('mjocoApp')
 
           $scope.supported = supported;
 
-          $rootScope.pageTitle = 'Cover — ' + $scope.testcard.title;
+          $rootScope.pageTitle = 'Vitals — ' + $scope.name;
 
           //imageID = $scope.testcard.node_assets[0].asset_id;
           //$rootScope.image = imageID + '-w700';
           //
-          $rootScope.primary.text = "Covers";
-          $rootScope.secondary.text = $scope.cover.title;
+          $rootScope.primary.text = "Vitals";
+          $rootScope.secondary.text = $scope.cover.name;
           $rootScope.tertiary.text = "";
           $rootScope.primary.arrow = true;
           $rootScope.secondary.arrow = false;

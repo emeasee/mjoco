@@ -2,14 +2,16 @@
 
 var express = require('express');
 var controller = require('./vital.controller');
+var config = require('../../config/environment');
+var auth = require('../../auth/auth.service');
 
 var router = express.Router();
 
 router.get('/', controller.index);
-router.get('/:id', controller.show);
-router.post('/', controller.create);
-router.put('/:id', controller.update);
-router.patch('/:id', controller.update);
-router.delete('/:id', controller.destroy);
+router.get('/:url', controller.show);
+router.post('/', auth.hasRole('admin'), controller.create);
+router.put('/:url', auth.hasRole('admin'), controller.update);
+router.patch('/:url', auth.hasRole('admin'), controller.update);
+router.delete('/:url', auth.hasRole('admin'), controller.destroy);
 
 module.exports = router;

@@ -1,0 +1,80 @@
+$max-width: 100em;
+
+.vitals {
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  a {
+    text-decoration: underline;
+  }
+}
+.touch {
+  .vitals .wrap{
+    padding: 0 1.5rem;
+    margin-top: 4rem;
+  }
+}
+.vitals-vitals{
+  position:absolute;
+  padding: 0 2rem;
+  top:50%;
+  width:100%;
+  @include transform(translateY(-50%));
+  .vitals-images{
+    max-width: 57rem;
+    margin: auto;
+  }
+
+  @include media(max-height 1130px ){
+    position: static;
+    margin: 6rem 0;
+    top: auto;
+    @include transform(none);
+
+    .vitals-images:after{
+      content: '';
+      height: 0;
+      display: table;
+      clear: both;
+    }
+  }
+}
+.vitals-vital {
+  @include span-columns(6);
+  @include omega(2n);
+  margin-bottom: 2.35%;
+  position:relative;
+  .assets {
+    overflow: hidden;
+    padding-bottom:100%;
+    position:relative;
+    // background:#fff;
+    border-radius: 1000px;
+    -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
+    @include transition(background 1s);
+    img, video{
+      position:absolute;
+      width:100%;
+      height:100%;
+      @include transition(opacity 1s);
+    }
+  }
+}
+
+.mobile {
+  .vitals-vitals{
+    position:static;
+    padding: 1.5rem;
+    top:0;
+    width:100%;
+    margin-top:4rem;
+  }
+  .vitals-vital{
+    @include span-columns(12);
+    @include omega(3n);
+    margin-bottom:2rem;
+  }
+
+}
+

@@ -108,13 +108,17 @@ end
 
 # temp URL for development
 url = IronWorker.config['mjoco_api']
-puts "Working with #{url}. Reading project payload..."
+puts "Working with #{url}. Reading payload..."
 
 # get the projects payload array
-projects = IronWorker.payload['projects']
+items = IronWorker.payload['items']
 
-if projects
-  puts 'project loaded.'
+if items[0].include? 'project_id'
+  puts 'a project loaded.'
+  type = 'projects'
+else
+  puts 'a vital loaded.'
+  type = 'vitals'
 end
 
 puts 'authenticating with server'
@@ -130,38 +134,67 @@ end
 hash = JSON[token]
 
 # for each project lets run through image generation and uploading to s3 then formatting and sending a POST to the database
-projects.each{ |project|
+items.each{ |item|
 
-  puts 'Processing project assets'
+  puts 'Processing item assets'
   # download and process imagery that has been flagged
 
-  project['project_assets'].each do |asset|
-    next unless asset['asset_flag']
-    process_image("#{asset['asset_id']}.#{asset['asset_format']}")
-  end
-
-  project['project_sections'].each do |section|
-    section['section_assets'].each do |asset|
+  if type == 'projects'
+    # if its a project
+    item['project_assets'].each do |asset|
       next unless asset['asset_flag']
       process_image("#{asset['asset_id']}.#{asset['asset_format']}")
     end
-  end
 
-  req = RestClient.get "#{url}/api/projects/#{project['project_url']}"
-
-  if req.include? 'project_id'
-    puts "#{project['project_url']} already exists: moving to update"
-    begin
-      RestClient.put "#{url}/api/projects/#{project['project_url']}", project.to_json, {:Authorization => "Bearer #{hash['token']}", :content_type => :json, :accept => :json}
-    rescue => e
-      puts e.response
+    item['project_sections'].each do |section|
+      section['section_assets'].each do |asset|
+        next unless asset['asset_flag']
+        process_image("#{asset['asset_id']}.#{asset['asset_format']}")
+      end
     end
+
+    req = RestClient.get "#{url}/api/projects/#{item['project_url']}"
+
+    if req.include? 'project_id'
+      puts "#{item['project_url']} already exists: moving to update"
+      begin
+        RestClient.put "#{url}/api/projects/#{item['project_url']}", item.to_json, {:Authorization => "Bearer #{hash['token']}", :content_type => :json, :accept => :json}
+      rescue => e
+        puts e.response
+      end
+    else
+      begin
+        puts "project not found: attempting to create #{item['project_url']} in DB"
+        RestClient.post "#{url}/api/projects", item.to_json, {:Authorization => "Bearer #{hash['token']}", :content_type => :json, :accept => :json}
+      rescue => e
+        puts e.response
+      end
+    end
+
   else
-    begin
-      puts "project not found: attempting to create #{project['project_url']} in DB"
-      RestClient.post "#{url}/api/projects", project.to_json, {:Authorization => "Bearer #{hash['token']}", :content_type => :json, :accept => :json}
-    rescue => e
-      puts e.response
+    # if its a vital
+    item['assets'].each do |asset|
+      next unless asset['asset_flag']
+      process_image("#{asset['asset_id']}.#{asset['asset_format']}")
+    end
+
+    req = RestClient.get "#{url}/api/vitals/#{item['url']}"
+    if req.include? 'url'
+      puts "#{item['url']} already exists: moving to update"
+      begin
+        RestClient.put "#{url}/api/vitals/#{item['url']}", item.to_json, {:Authorization => "Bearer #{hash['token']}", :content_type => :json, :accept => :json}
+      rescue => e
+        puts e.response
+      end
+    else
+      begin
+        puts "project not found: attempting to create #{item['url']} in DB"
+        RestClient.post "#{url}/api/vitals", item.to_json, {:Authorization => "Bearer #{hash['token']}", :content_type => :json, :accept => :json}
+      rescue => e
+        puts e.response
+      end
     end
   end
+
+
 }

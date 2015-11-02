@@ -13,7 +13,7 @@ exports.index = function(req, res) {
 
 // Get a single vital
 exports.show = function(req, res) {
-  Vital.findById(req.params.id, function (err, vital) {
+  Vital.find({ url : req.params.url }, function (err, vital) {
     if(err) { return handleError(res, err); }
     if(!vital) { return res.status(404).send('Not Found'); }
     return res.json(vital);

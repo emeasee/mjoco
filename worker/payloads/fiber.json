@@ -1,0 +1,146 @@
+{
+  "projects": [
+    {
+	    "project_id": "08",
+      "project_url": "fiber",
+      "project_client": null,
+      "project_title": "Experiencing Fiber Optics",
+      "project_text": "An interactive experience to learn about Fiber Optics",
+      "project_year": "2011",
+      "project_template": "fill",
+      "project_templates": {
+        "fill": true
+      },
+      "project_collaborator": "Ali Karayol & Wan-Ting",
+      "project_external_url": null,
+      "project_tags": ["interaction","art_direction","video","featured"],
+      "project_colour": "white",
+      "project_background": "rich-black",
+      "cover_colour":"white",
+      "cover_background":"rich-black",
+      "project_assets": [{
+        "asset_id" : "fiber-03",
+        "asset_width" : "2400",
+        "asset_height" : "1600",
+        "asset_format" : "jpg",
+        "asset_type" : "image",
+        "asset_flag" : false
+      }],
+      "project_long_title": "An interactive experience to learn about Fiber Optics",
+      "project_tags_human": [{
+        "url" : "interaction",
+        "text" : "Interaction"
+      },{
+        "url" : "featured",
+        "text" : "Featured"
+      },{
+        "url" : "video",
+        "text" : "Video"
+      },{
+        "url" : "art_direction",
+        "text" : "Art Direction"
+      }],
+      "project_disciplines_human": [{
+        "url" : "product",
+        "text" : "Product"
+      },{
+        "url" : "code",
+        "text" : "Code"
+      }],
+      "project_sectors_human": [{
+        "url" : "art",
+        "text" : "Art"
+      },{
+        "url" : "installation",
+        "text" : "Installation"
+      }],
+      "project_sections": [{
+        "section_type" : "section",
+        "section_url" : "video",
+        "section_title" : "video",
+        "section_assets" : [{
+          "asset_id" : "fiber-02",
+          "asset_width" : "1280",
+          "asset_height" : "720",
+          "asset_format" : "jpg",
+          "asset_type" : "vimeo",
+          "asset_vimeo" : "20002903",
+          "asset_flag" : false
+        }],
+        "section_text" : null,
+        "section_template" : null,
+        "section_tags" : null,
+        "section_show_title" : false,
+        "section_iframe_url" : null,
+        "section_ratio" : 1,
+        "section_assets_count" : 1,
+        "section_templates" : {
+          "cycle" : false,
+          "fade" : false,
+          "auto": false,
+          "fast" : false,
+          "fill" : false
+        }
+      },{
+        "section_type" : "section",
+        "section_url" : "more images",
+        "section_title" : "images",
+        "section_assets" : [{
+          "asset_id" : "fiber-03",
+          "asset_width" : "2400",
+          "asset_height" : "1600",
+          "asset_format" : "jpg",
+          "asset_type" : "image",
+          "asset_flag" : true
+        },{
+          "asset_id" : "fiber-04",
+          "asset_width" : "2400",
+          "asset_height" : "1600",
+          "asset_format" : "jpg",
+          "asset_type" : "image",
+          "asset_flag" : true
+        },{
+          "asset_id" : "fiber-05",
+          "asset_width" : "2400",
+          "asset_height" : "1600",
+          "asset_format" : "jpg",
+          "asset_type" : "image",
+          "asset_flag" : true
+        }],
+        "section_text" : null,
+        "section_template" : "",
+        "section_tags" : null,
+        "section_show_title" : false,
+        "section_iframe_url" : null,
+        "section_ratio" : 1,
+        "section_assets_count" : 4,
+        "section_templates" : {
+          "cycle" : false,
+          "fade" : false,
+          "auto": false,
+          "fast" : false,
+          "fill" : false
+        }
+      },{
+        "section_type": "section",
+        "section_url": "text",
+        "section_title": "Text",
+        "section_assets": [],
+        "section_text": "<p>Experiencing Fiber-Optics is an interactive display that conveys the concept of data transmission through a fiber-optic cable. The interaction starts with three distinct blocks, representing different types of data, which are inserted into the input device to activate a single transmission of bits. The data travels through a three dimensional representation of the inside of a fiber-optic cable until it reaches the output device and is displayed as a 2D light square.</p>",
+        "section_template": "",
+        "section_tags": null,
+        "section_show_title": true,
+        "section_iframe_url": null,
+        "section_iframe_ratio": 1,
+        "section_assets_count": null,
+        "section_templates": {
+          "cycle" : false,
+          "fade" : false,
+          "auto": false,
+          "fast" : false,
+          "fill" : false
+        }
+      }]
+    }
+  ]
+}

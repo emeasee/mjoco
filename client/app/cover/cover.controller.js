@@ -13,7 +13,6 @@ angular.module('mjocoApp')
       $scope.$on('$stateChangeSuccess', function(e, toState, toParams, fromState, fromParams) {
 
         if(toParams.url){
-          //TODO: Figure this out once we have the testcards page sorted out
           angular.forEach(covers, function(cover, i) {
             if (cover.url === toParams.url) {
               index = i + 1;
@@ -113,7 +112,6 @@ angular.module('mjocoApp')
         }
 
         localStorageService.set('cover', index);
-        //FIXME: This needs to be turned on again before deploy or the cover does not show
         $scope.coverUrl = $scope.cover.data_url;
         $rootScope.textColor = $scope.cover.data_colour + '-text';
         $rootScope.backgroundColor = $scope.cover.data_background + '-background';

@@ -1,7 +1,7 @@
 @import 'bourbon';
 @import 'neat';
 
-@import url(http://fonts.googleapis.com/css?family=Muli:300,400);
+@import url(https://fonts.googleapis.com/css?family=Asap:400,700);
 
 /**
  * $group Vars
@@ -40,7 +40,7 @@ html{
 }
 
 body {
-  font-family: 'Muli', sans-serif;
+  font-family: 'Asap', sans-serif;
   letter-spacing:0.02em;
   color: $black;
   overflow:hidden;

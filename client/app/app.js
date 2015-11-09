@@ -21,11 +21,13 @@ angular.module('mjocoApp', [
   'anim-in-out',
   'LocalStorageModule'
 ])
-  .config(['$stateProvider', '$logProvider', '$locationProvider', '$urlRouterProvider', '$httpProvider', '$provide', '$sceDelegateProvider', '$sceProvider',
-    function($stateProvider, $logProvider, $locationProvider, $urlRouterProvider, $httpProvider, $provide, $sceDelegateProvider, $sceProvider) {
+  .config(['$stateProvider', '$logProvider', '$locationProvider', '$urlRouterProvider', '$httpProvider', '$provide', '$sceDelegateProvider', '$sceProvider', 'cfpLoadingBarProvider',
+    function($stateProvider, $logProvider, $locationProvider, $urlRouterProvider, $httpProvider, $provide, $sceDelegateProvider, $sceProvider, cfpLoadingBarProvider) {
 
       $logProvider.debugEnabled(true);
       $locationProvider.html5Mode(true);
+
+      cfpLoadingBarProvider.includeSpinner = false;
 
       $sceDelegateProvider.resourceUrlWhitelist([
         'self',

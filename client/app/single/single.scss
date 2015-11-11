@@ -30,7 +30,7 @@
   }
   .asset{
     position:relative;
-    background: rgba(120,120,120,0.1);
+    //background: rgba(120,120,120,0.1);
     img, video{
       @include absfull();
     }
@@ -91,7 +91,7 @@
     }
     .assets {
       margin-bottom:0;
-      background: rgba(120,120,120,0.1);
+      //background: rgba(120,120,120,0.1);
       .asset-wrap{
         opacity:0;
         margin-bottom:0;

@@ -7,12 +7,12 @@
       "project_title": "FieldLogs",
       "project_text": "Standardize Work & Real-Time Field Data Capture",
       "project_year": "2014",
-      "project_template": "cycle auto fast",
+      "project_template": "cycle auto fade",
       "project_templates": {
         "cycle": true,
         "auto": true,
-        "fast": true,
-        "fade": false,
+        "fast": false,
+        "fade": true,
         "fill": false
       },
       "project_collaborator": null,
@@ -33,14 +33,14 @@
         "asset_id" : "fieldlogs-11",
         "asset_width" : "2400",
         "asset_height" : "1600",
-        "asset_format" : "jpg",
+        "asset_format" : "png",
         "asset_type" : "image",
         "asset_flag" : false
       },{
         "asset_id" : "fieldlogs-12",
         "asset_width" : "2400",
         "asset_height" : "1600",
-        "asset_format" : "jpg",
+        "asset_format" : "png",
         "asset_type" : "image",
         "asset_flag" : false
       },{
@@ -83,14 +83,14 @@
           "asset_height" : "1600",
           "asset_format" : "png",
           "asset_type" : "image",
-          "asset_flag" : true
+          "asset_flag" : false
         },{
           "asset_id" : "fieldlogs-02",
           "asset_width" : "2400",
           "asset_height" : "1600",
           "asset_format" : "png",
           "asset_type" : "image",
-          "asset_flag" : true
+          "asset_flag" : false
         }],
         "section_text" : null,
         "section_template" : "",
@@ -116,21 +116,21 @@
           "asset_height" : "1600",
           "asset_format" : "png",
           "asset_type" : "image",
-          "asset_flag" : true
+          "asset_flag" : false
         },{
           "asset_id" : "fieldlogs-04",
           "asset_width" : "2400",
           "asset_height" : "1600",
           "asset_format" : "png",
           "asset_type" : "image",
-          "asset_flag" : true
+          "asset_flag" : false
         },{
           "asset_id" : "fieldlogs-05",
           "asset_width" : "2400",
           "asset_height" : "1600",
           "asset_format" : "png",
           "asset_type" : "image",
-          "asset_flag" : true
+          "asset_flag" : false
         }],
         "section_text" : null,
         "section_template" : "cycle auto fade",
@@ -156,35 +156,35 @@
           "asset_height" : "1600",
           "asset_format" : "png",
           "asset_type" : "image",
-          "asset_flag" : true
+          "asset_flag" : false
         },{
           "asset_id" : "fieldlogs-07",
           "asset_width" : "2400",
           "asset_height" : "1600",
           "asset_format" : "jpg",
           "asset_type" : "image",
-          "asset_flag" : true
+          "asset_flag" : false
         },{
           "asset_id" : "fieldlogs-08",
           "asset_width" : "2400",
           "asset_height" : "1600",
           "asset_format" : "jpg",
           "asset_type" : "image",
-          "asset_flag" : true
+          "asset_flag" : false
         },{
           "asset_id" : "fieldlogs-09",
           "asset_width" : "2400",
           "asset_height" : "1600",
           "asset_format" : "jpg",
           "asset_type" : "image",
-          "asset_flag" : true
+          "asset_flag" : false
         },{
           "asset_id" : "fieldlogs-10",
           "asset_width" : "2400",
           "asset_height" : "1600",
           "asset_format" : "jpg",
           "asset_type" : "image",
-          "asset_flag" : true
+          "asset_flag" : false
         }],
         "section_text" : null,
         "section_template" : null,
@@ -210,14 +210,14 @@
           "asset_height" : "1600",
           "asset_format" : "png",
           "asset_type" : "image",
-          "asset_flag" : true
+          "asset_flag" : false
         },{
           "asset_id" : "fieldlogs-12",
           "asset_width" : "2400",
           "asset_height" : "1600",
           "asset_format" : "png",
           "asset_type" : "image",
-          "asset_flag" : true
+          "asset_flag" : false
         }],
         "section_text" : null,
         "section_template" : "cycle auto fade",

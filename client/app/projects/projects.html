@@ -11,7 +11,7 @@
             ng-cycle="{ itemSelector: '.asset-wrap', auto: true, playOnScroll: false }"
             >
             <div class="assets" >
-              <div ng-repeat="asset in project.project_assets" class="asset-wrap" data-ratio="{{ asset.asset_width/asset.asset_height }}">
+              <div ng-repeat="asset in project.project_assets" class="asset-wrap {{ project.cover_background }}-background" data-ratio="{{ asset.asset_width/asset.asset_height }}">
 
                 <div ng-if="!project.project_templates.fill" class="asset {{ asset.asset_type }}" ng-include="'app/projects/asset.html'"></div>
 

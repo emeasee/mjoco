@@ -13,8 +13,9 @@
   z-index: 49;
   opacity:0;
   @include transition(opacity 0.5s $cubic);
-  width:3em;
-  height:320px;
+  @include transition(background 0.5s $cubic);
+  width:3rem;
+  height:100%;
   a{
     width:100%;
     height:100%;
@@ -53,6 +54,7 @@
         opacity:1;
         visibility: visible;
       }
+      background: rgba(120,120,120,0.1);
     }
   }
   .next:hover .image{

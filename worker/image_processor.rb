@@ -74,35 +74,35 @@ def process_image(image)
     filename = download_image("#{image}")
 
     puts 'Generating related project thumbnails'
-    processed_filename = generate_thumb(filename, 380, 254)
+    processed_filename = generate_thumb(filename, 380, 254, File.extname(filename).delete('.'))
     upload_file(processed_filename)
 
     puts 'Generating mobile picture'
-    processed_filename = resize_image(filename, 700, nil, 50)
+    processed_filename = resize_image(filename, 700, nil, 50, File.extname(filename).delete('.'))
     upload_file(processed_filename)
 
     puts 'Generating mid picture'
-    processed_filename = resize_image(filename, 1200, nil, 95)
+    processed_filename = resize_image(filename, 1200, nil, 95, File.extname(filename).delete('.'))
     upload_file(processed_filename)
 
     puts 'Generating mid picture quality boost'
-    processed_filename = resize_image(filename, 1200, nil, 100)
+    processed_filename = resize_image(filename, 1200, nil, 100, File.extname(filename).delete('.'))
     upload_file(processed_filename)
 
     puts 'Generating large picture'
-    processed_filename = resize_image(filename, 1400, nil, 95)
+    processed_filename = resize_image(filename, 1400, nil, 95, File.extname(filename).delete('.'))
     upload_file(processed_filename)
 
     puts 'Generating large picture quality boost'
-    processed_filename = resize_image(filename, 1400, nil, 100)
+    processed_filename = resize_image(filename, 1400, nil, 100, File.extname(filename).delete('.'))
     upload_file(processed_filename)
 
     puts 'Generating xlarge picture'
-    processed_filename = resize_image(filename, 1600, nil, 95)
+    processed_filename = resize_image(filename, 1600, nil, 95, File.extname(filename).delete('.'))
     upload_file(processed_filename)
 
     puts 'Generating xlarge picture quality boost'
-    processed_filename = resize_image(filename, 1600, nil, 100)
+    processed_filename = resize_image(filename, 1600, nil, 100, File.extname(filename).delete('.'))
     upload_file(processed_filename)
 end
 

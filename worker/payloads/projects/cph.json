@@ -1,0 +1,164 @@
+{
+  "items": [
+    {
+	    "project_id": "06",
+      "project_url": "cph",
+      "project_client": "Copenhagen Airport",
+      "project_title": "CPH Cloud",
+      "project_text": "A concept PaaS for building a better airport experience for air passengers.",
+      "project_year": "2011",
+      "project_template": "",
+      "project_templates": {
+
+      },
+      "project_collaborator": "Ali Karayol & Yufan Wang",
+      "project_external_url": null,
+      "project_tags": ["interaction","user_interface","featured"],
+      "project_colour": "off-white",
+      "project_background": "charcoal",
+      "cover_colour":"off-white",
+      "cover_background":"charcoal",
+      "project_assets": [{
+        "asset_id" : "cph-01",
+        "asset_width" : "1280",
+        "asset_height" : "720",
+        "asset_format" : "jpg",
+        "asset_type" : "video",
+        "asset_flag" : true
+      }],
+      "project_long_title": "A concept PaaS for building a better airport experience for air passengers.",
+      "project_tags_human": [{
+        "url" : "interaction",
+        "text" : "Interaction"
+      },{
+        "url" : "featured",
+        "text" : "Featured"
+      },{
+        "url" : "user_interface",
+        "text" : "User Interface"
+      }],
+      "project_disciplines_human": [{
+        "url" : "mobile",
+        "text" : "Mobile"
+      },{
+        "url" : "web",
+        "text" : "Web"
+      },{
+        "url" : "product",
+        "text" : "Product"
+      }],
+      "project_sectors_human": [{
+        "url" : "service",
+        "text" : "Service"
+      }],
+      "project_sections": [{
+        "section_type" : "section",
+        "section_url" : "cycle",
+        "section_title" : "cycle",
+        "section_assets" : [{
+          "asset_id" : "cph-02",
+          "asset_width" : "2400",
+          "asset_height" : "1600",
+          "asset_format" : "jpg",
+          "asset_type" : "image",
+          "asset_flag" : true
+        },{
+          "asset_id" : "cph-03",
+          "asset_width" : "2400",
+          "asset_height" : "1600",
+          "asset_format" : "jpg",
+          "asset_type" : "image",
+          "asset_flag" : true
+        },{
+          "asset_id" : "cph-04",
+          "asset_width" : "2400",
+          "asset_height" : "1600",
+          "asset_format" : "jpg",
+          "asset_type" : "image",
+          "asset_flag" : true
+        },{
+          "asset_id" : "cph-05",
+          "asset_width" : "2400",
+          "asset_height" : "1600",
+          "asset_format" : "jpg",
+          "asset_type" : "image",
+          "asset_flag" : true
+        },{
+          "asset_id" : "cph-06",
+          "asset_width" : "2400",
+          "asset_height" : "1600",
+          "asset_format" : "jpg",
+          "asset_type" : "image",
+          "asset_flag" : true
+        },{
+          "asset_id" : "cph-07",
+          "asset_width" : "2400",
+          "asset_height" : "1600",
+          "asset_format" : "jpg",
+          "asset_type" : "image",
+          "asset_flag" : true
+        }],
+        "section_text" : null,
+        "section_template" : "cycle auto fade",
+        "section_tags" : null,
+        "section_show_title" : false,
+        "section_iframe_url" : null,
+        "section_ratio" : 1,
+        "section_assets_count" : 4,
+        "section_templates" : {
+          "cycle" : true,
+          "fade" : true,
+          "auto": true,
+          "fast" : false,
+          "fill" : false
+        }
+      },{
+        "section_type" : "section",
+        "section_url" : "video",
+        "section_title" : "video",
+        "section_assets" : [{
+          "asset_id" : "cph-01",
+          "asset_width" : "1280",
+          "asset_height" : "720",
+          "asset_format" : "jpg",
+          "asset_type" : "vimeo",
+          "asset_vimeo" : "28406122",
+          "asset_flag" : false
+        }],
+        "section_text" : null,
+        "section_template" : null,
+        "section_tags" : null,
+        "section_show_title" : false,
+        "section_iframe_url" : null,
+        "section_ratio" : 1,
+        "section_assets_count" : 1,
+        "section_templates" : {
+          "cycle" : false,
+          "fade" : false,
+          "auto": false,
+          "fast" : false,
+          "fill" : false
+        }
+      },{
+        "section_type": "section",
+        "section_url": "text",
+        "section_title": "Text",
+        "section_assets": [],
+        "section_text": "<p>CPH Cloud is a networked service platform that provides support and new opportunities to passengers, staff and retailers by connecting them together, prompting them with useful information at opportune moments throughout the airport (space & time) and providing a key platform for expansion of the travelling experience in the future.<br><br>One such expansion could be FlashTicket, a potential CPH Cloud platform service that allows passengers to credit a boarding pass with money and spend it at the airport, both on their journey and on future journeys. The service provides incentives in the form of rounding-up spare change and special offers and discounts from retailers.</p>",
+        "section_template": "",
+        "section_tags": null,
+        "section_show_title": true,
+        "section_iframe_url": null,
+        "section_iframe_ratio": 1,
+        "section_assets_count": null,
+        "section_templates": {
+          "cycle" : false,
+          "fade" : false,
+          "auto": false,
+          "fast" : false,
+          "fill" : false
+        }
+      }]
+    }
+  ]
+}

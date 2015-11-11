@@ -1,0 +1,147 @@
+{
+  "items": [
+    {
+	    "project_id": "05",
+      "project_url": "mrd",
+      "project_client": null,
+      "project_title": "Mass Responsive Device",
+      "project_text": "Dynamic Layout Printing",
+      "project_year": "2011",
+      "project_template": "fill",
+      "project_templates": {
+        "fill": true
+      },
+      "project_collaborator": null,
+      "project_external_url": null,
+      "project_tags": ["interaction","art_direction", "video","featured"],
+      "project_colour": "charcoal",
+      "project_background": "off-white",
+      "cover_colour":"white",
+      "cover_background":"off-white",
+      "project_assets": [{
+        "asset_id" : "mrd-01",
+        "asset_width" : "2400",
+        "asset_height" : "1600",
+        "asset_format" : "jpg",
+        "asset_type" : "image",
+        "asset_flag" : true
+      }],
+      "project_long_title": "Dynamic Layout processor that responds to data from an external device by printing out a composition.",
+      "project_tags_human": [{
+        "url" : "interaction",
+        "text" : "Interaction"
+      },{
+        "url" : "video",
+        "text" : "Video"
+      },{
+        "url" : "featured",
+        "text" : "Featured"
+      },{
+        "url" : "art_direction",
+        "text" : "Art Direction"
+      }],
+      "project_disciplines_human": [{
+        "url" : "code",
+        "text" : "Code"
+      }],
+      "project_sectors_human": [{
+        "url" : "art",
+        "text" : "Art"
+      }],
+      "project_sections": [{
+        "section_type" : "section",
+        "section_url" : "cycle",
+        "section_title" : "cycle",
+        "section_assets" : [{
+          "asset_id" : "mrd-03",
+          "asset_width" : "2400",
+          "asset_height" : "1600",
+          "asset_format" : "jpg",
+          "asset_type" : "image",
+          "asset_flag" : false
+        },{
+          "asset_id" : "mrd-04",
+          "asset_width" : "2400",
+          "asset_height" : "1600",
+          "asset_format" : "jpg",
+          "asset_type" : "image",
+          "asset_flag" : false
+        },{
+          "asset_id" : "mrd-05",
+          "asset_width" : "2400",
+          "asset_height" : "1600",
+          "asset_format" : "jpg",
+          "asset_type" : "image",
+          "asset_flag" : false
+        },{
+          "asset_id" : "mrd-01",
+          "asset_width" : "2400",
+          "asset_height" : "1600",
+          "asset_format" : "jpg",
+          "asset_type" : "image",
+          "asset_flag" : false
+        }],
+        "section_text" : null,
+        "section_template" : "cycle auto fade",
+        "section_tags" : null,
+        "section_show_title" : false,
+        "section_iframe_url" : null,
+        "section_ratio" : 1,
+        "section_assets_count" : 4,
+        "section_templates" : {
+          "cycle" : true,
+          "fade" : true,
+          "auto": true,
+          "fast" : false,
+          "fill" : false
+        }
+      },{
+        "section_type" : "section",
+        "section_url" : "video",
+        "section_title" : "video",
+        "section_assets" : [{
+          "asset_id" : "mrd-02",
+          "asset_width" : "1280",
+          "asset_height" : "720",
+          "asset_format" : "jpg",
+          "asset_type" : "vimeo",
+          "asset_vimeo" : "22597868",
+          "asset_flag" : false
+        }],
+        "section_text" : null,
+        "section_template" : null,
+        "section_tags" : null,
+        "section_show_title" : false,
+        "section_iframe_url" : null,
+        "section_ratio" : 1,
+        "section_assets_count" : 1,
+        "section_templates" : {
+          "cycle" : false,
+          "fade" : false,
+          "auto": false,
+          "fast" : false,
+          "fill" : false
+        }
+      },{
+        "section_type": "section",
+        "section_url": "text",
+        "section_title": "Text",
+        "section_assets": [],
+        "section_text": "<p>The Mass Responsive Device is a generative experiment into the relationship that we have with the way in which we organise our data. Our relationship with our data and how we keep them organised on your digital storage devices reflects our personality in the same way having a clean or messy desk may reflect this also.<br/><br/>To highlight this intriguing parallel the Mass Responsive Device was developed to create a unique, one of kind graphic representation of any storage device plugged into it, producing a snapshot of it's contents all on one A4 page. The device reads raw data from text files, image files and even code and responds in a way that reflects the way you have organised the information in the storage device's file structure, the time of day used, and even the amount of times the experiment has been used.</p>",
+        "section_template": "",
+        "section_tags": null,
+        "section_show_title": true,
+        "section_iframe_url": null,
+        "section_iframe_ratio": 1,
+        "section_assets_count": null,
+        "section_templates": {
+          "cycle" : false,
+          "fade" : false,
+          "auto": false,
+          "fast" : false,
+          "fill" : false
+        }
+      }]
+    }
+  ]
+}

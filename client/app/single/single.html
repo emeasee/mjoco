@@ -6,7 +6,7 @@
         <div>
           <div ng-if="section.section_assets.length > 0 && section.section_templates.cycle === true" class="assets-wrap ng-wait-for-images " ng-class="{ fade: section.section_templates.fade, cycle: section.section_templates.cycle }" ng-cycle="{ itemSelector: '.asset-wrap', delay: (section.section_templates.fast) ? '1500' : '3000' }">
             <div class="assets" ng-style="getAssetsHeight(section.section_assets)">
-              <div ng-repeat="asset in section.section_assets" class="asset-wrap" data-ratio="{{ asset.asset_width/asset.asset_height }}">
+              <div ng-repeat="asset in section.section_assets" class="asset-wrap {{ project.project_background }}-background" data-ratio="{{ asset.asset_width/asset.asset_height }}">
                 <div class="asset {{ asset.asset_type }} ng-wait-for-images loading" ng-include="'app/projects/asset.html'" ng-style="getAssetSize(asset)">
                 </div>
               </div>

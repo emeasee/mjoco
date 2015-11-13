@@ -25,7 +25,7 @@
   }
   .title{
     position: absolute;
-    bottom:1em;
+    top:50%;
     width:34vw;
     max-width:380px;
     height:3em;
@@ -37,7 +37,7 @@
   }
   .image{
     position:absolute;
-    bottom:3.6em;
+    top:55%;
     width:29.5vw;
     max-width:380px;
     overflow:hidden;
@@ -54,7 +54,7 @@
         opacity:1;
         visibility: visible;
       }
-      background: rgba(120,120,120,0.1);
+      //background: rgba(120,120,120,0.1);
     }
   }
   .next:hover .image{
@@ -86,11 +86,11 @@
   .arrow{
     position: absolute;
     left: 1rem;
-    bottom:1.5em;
+    top:50%;
   }
   .title{
     left: 3em;
-    padding:1em 0;
+    //padding:1em 0;
   }
   .image{
     left: -500px;
@@ -105,12 +105,12 @@
   .arrow{
     position: absolute;
     right: 1rem;
-    bottom:1.5em;
+    top:50%;
   }
   .title{
     right: 3em;
     text-align: right;
-    padding:1em 0;
+    //padding:1em 0;
   }
   .image{
     right: -500px;

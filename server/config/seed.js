@@ -48,28 +48,28 @@ Project.find({}).remove(function() {
     project_external_url: 'www.fieldlogs.com',
     project_tags: ['featured','user_interface'],
     project_colour: 'charcoal',
-    project_background: 'off-white',
-    cover_colour: 'white',
-    cover_background: 'charcoal',
+    project_background: 'white',
+    cover_colour: 'charcoal',
+    cover_background: 'white',
     project_assets: [{
-      asset_id : 'fieldlogs-01',
-      asset_width : '2800',
-      asset_height : '1800',
-      asset_format : 'jpg',
+      asset_id : 'fieldlogs-04',
+      asset_width : '2400',
+      asset_height : '1600',
+      asset_format : 'png',
       asset_type : 'image',
       asset_flag : false
     },{
         asset_id : 'fieldlogs-02',
-        asset_width : '2800',
-        asset_height : '1800',
-        asset_format : 'jpg',
+        asset_width : '2400',
+        asset_height : '1600',
+        asset_format : 'png',
         asset_type : 'image',
         asset_flag : false
     },{
       asset_id : 'fieldlogs-03',
-      asset_width : '2800',
-      asset_height : '1800',
-      asset_format : 'jpg',
+      asset_width : '2400',
+      asset_height : '1600',
+      asset_format : 'png',
       asset_type : 'image',
       asset_flag : false
     }],
@@ -97,36 +97,29 @@ Project.find({}).remove(function() {
       section_url : 'top',
       section_title : 'top',
       section_assets : [{
-        asset_id : 'fieldlogs-01',
-        asset_width : '2800',
-        asset_height : '1800',
-        asset_format : 'jpg',
-        asset_type : 'image',
-        asset_flag : false
-      },{
         asset_id : 'fieldlogs-02',
-        asset_width : '2800',
-        asset_height : '1800',
-        asset_format : 'jpg',
+        asset_width : '2400',
+        asset_height : '1600',
+        asset_format : 'png',
         asset_type : 'image',
         asset_flag : false
       },{
         asset_id : 'fieldlogs-03',
-        asset_width : '2800',
-        asset_height : '1800',
-        asset_format : 'jpg',
+        asset_width : '2400',
+        asset_height : '1600',
+        asset_format : 'png',
         asset_type : 'image',
         asset_flag : false
       },{
         asset_id : 'fieldlogs-04',
-        asset_width : '2800',
-        asset_height : '1800',
-        asset_format : 'jpg',
+        asset_width : '2400',
+        asset_height : '1600',
+        asset_format : 'png',
         asset_type : 'image',
         asset_flag : false
       }],
       section_text : '',
-      section_template : 'cycle auto',
+      section_template : 'cycle auto fade',
       section_show_title : false,
       section_iframe_url : null,
       section_assets_count : 4,
@@ -136,7 +129,7 @@ Project.find({}).remove(function() {
         fast : false,
         auto: true,
         fill: false,
-        fade: false
+        fade: true
       }
     },{
         section_type : 'section',
@@ -144,9 +137,9 @@ Project.find({}).remove(function() {
         section_title : 'more images',
         section_assets : [{
           asset_id : 'fieldlogs-05',
-          asset_width : '2800',
-          asset_height : '1800',
-          asset_format : 'jpg',
+          asset_width : '2400',
+          asset_height : '1600',
+          asset_format : 'png',
           asset_type : 'image',
           asset_flag : false
         }],
@@ -169,9 +162,9 @@ Project.find({}).remove(function() {
       section_title : 'more images',
       section_assets : [{
         asset_id : 'fieldlogs-06',
-        asset_width : '2800',
-        asset_height : '1800',
-        asset_format : 'jpg',
+        asset_width : '2400',
+        asset_height : '1600',
+        asset_format : 'png',
         asset_type : 'image',
         asset_flag : false
       }],
@@ -194,8 +187,8 @@ Project.find({}).remove(function() {
       section_title : 'more images',
       section_assets : [{
         asset_id : 'fieldlogs-07',
-        asset_width : '2800',
-        asset_height : '1800',
+        asset_width : '2400',
+        asset_height : '1600',
         asset_format : 'jpg',
         asset_type : 'image',
         asset_flag : false

@@ -31,8 +31,8 @@ angular.module('mjocoApp', [
 
       $sceDelegateProvider.resourceUrlWhitelist([
         'self',
-        'http://s3-eu-west-1.amazonaws.com/mjoco/**',
-        'http://*.vimeo.com/**'
+        'https://s3-eu-west-1.amazonaws.com/mjoco/**',
+        'https://*.vimeo.com/**'
       ]);
 
       $provide.decorator('ngSrcDirective', ['$delegate', '$sniffer',

@@ -1,4 +1,4 @@
-<div>
+<div ng-controller="NavbarCtrl">
   <div class="nav-wrap">
     <div class="nav-overflow">
       <a href="/projects/featured/" class="nav-projects">Projects</a>
@@ -13,6 +13,7 @@
     </div>
   </div>
   <div class="active-wrap" ng-click="toggleMenu()">
+    <h1 class="voice"><a href="{{ link }}">It's {{ date }}</a></h1>
     <div class="active-overflow">
       <div class="active" ng-class="{ arrow: primary.arrow }" ng-bind="primary.text">
       </div>

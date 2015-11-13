@@ -96,6 +96,13 @@ h1 {
     vertical-align: bottom;
     text-decoration: none!important;
   }
+  &.voice{
+    left: 8px;
+    right: auto;
+    a{
+      padding: 1.5rem 0 1rem 1.7rem;
+    }
+  }
 }
 .burger{
   display:none;

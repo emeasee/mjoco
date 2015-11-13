@@ -218,6 +218,10 @@ article {
   visibility: hidden;
 }
 
+.ng-wait-for-images img{
+  @include transition(opacity 1s);
+}
+
 .loading img{
   opacity: 0;
 }

@@ -10,5 +10,6 @@ angular.module('mjocoApp')
       $rootScope.voice.cover[3] = "<a href='#'>looking</a>";
       $rootScope.voice.cover[4] = "<a href='#'>wonderful</a>";
 
+      $rootScope.voice.projects[0] = "<a href='#'>projects</a>";
   }]);
 

@@ -4,6 +4,8 @@ angular.module('mjocoApp')
   .controller('MainCtrl', ['$log', '$scope', '$stateParams', '$state', '$rootScope', '$location', '$window', '$document', '$timeout', 'localStorageService',
     function($log, $scope, $stateParams, $state, $rootScope, $location, $window, $document, $timeout, localStorageService) {
 
+      var stepThrough = 0;
+
       $rootScope.$on('animStart', function($event, element, speed) {
 
       });
@@ -137,16 +139,18 @@ angular.module('mjocoApp')
 
       $rootScope.voiceChange = function(state) {
         var i = 0;
-        interval(function () {
+        clearInterval(stepThrough);
+
+        stepThrough = setInterval(function(){
           $scope.$apply(function() {
             $rootScope.voice.text = state[i];
             if (i === state.length - 1) {
-              $rootScope.voiceChange(state);
+              clearInterval(stepThrough);
             } else {
               i++;
             }
           });
-        }, 8000, state.length);
+        }, 3000);
       };
 
       $rootScope.toggleMenu = function(){
@@ -202,25 +206,6 @@ angular.module('mjocoApp')
         return string.replace(/\w\S*/g, function(txt) {
           return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
         });
-      };
-
-      var interval = function (func, wait, times){
-        var interv = function(w, t){
-          return function(){
-            if(typeof t === "undefined" || t-- > 0){
-              setTimeout(interv, w);
-              try{
-                func.call(null);
-              }
-              catch(e){
-                t = 0;
-                throw e.toString();
-              }
-            }
-          };
-        }(wait, times);
-
-        setTimeout(interv, wait);
       };
 
     }]);

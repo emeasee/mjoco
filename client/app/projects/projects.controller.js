@@ -51,6 +51,10 @@ angular.module('mjocoApp')
 
         $rootScope.pageTitle = tags;
 
+        $rootScope.voice.text = "<a href='#'>oh</a>";
+
+        $rootScope.voiceChange($rootScope.voice.projects);
+
       });
 
       $rootScope.$watch('windowWidth', function(n) {

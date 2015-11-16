@@ -107,6 +107,8 @@ angular.module('mjocoApp')
             $rootScope.primary.arrow = false;
             $rootScope.secondary.arrow = false;
 
+            $rootScope.voice.text = "<a href='#'>oh</a>";
+
             $rootScope.voiceChange($rootScope.voice.cover);
 
           });

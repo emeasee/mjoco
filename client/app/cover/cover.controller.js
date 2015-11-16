@@ -90,7 +90,7 @@ angular.module('mjocoApp')
 
             $scope.cover = $scope.covers[index];
 
-            $log.debug('Cover', $scope.cover);
+            //$log.debug('Cover', $scope.cover);
 
             $rootScope.bodyHeaderClass = 'header-out';
 
@@ -106,6 +106,8 @@ angular.module('mjocoApp')
             $rootScope.tertiary.text = "";
             $rootScope.primary.arrow = false;
             $rootScope.secondary.arrow = false;
+
+            $rootScope.voiceChange($rootScope.voice.cover);
 
           });
 

@@ -109,9 +109,15 @@ angular.module('mjocoApp')
       $rootScope.secondary = {};
       $rootScope.tertiary = {};
 
+      $rootScope.voice = {};
+      $rootScope.voice.cover = [];
+      $rootScope.voice.projects = [];
+      $rootScope.voice.single = [];
+
       $rootScope.primary.text = "";
       $rootScope.secondary.text = "";
       $rootScope.tertiary.text = "";
+      $rootScope.voice.text = "";
 
       $rootScope.textColor = "black-text";
       $rootScope.backgroundColor = "white-background";
@@ -128,6 +134,20 @@ angular.module('mjocoApp')
       $rootScope.menuOpen = true;
 
       $rootScope.menuOpen = false;
+
+      $rootScope.voiceChange = function(state) {
+        var i = 0;
+        interval(function () {
+          $scope.$apply(function() {
+            $rootScope.voice.text = state[i];
+            if (i === state.length - 1) {
+              $rootScope.voiceChange(state);
+            } else {
+              i++;
+            }
+          });
+        }, 8000, state.length);
+      };
 
       $rootScope.toggleMenu = function(){
         $rootScope.menuOpen = !$rootScope.menuOpen;
@@ -182,6 +202,25 @@ angular.module('mjocoApp')
         return string.replace(/\w\S*/g, function(txt) {
           return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
         });
+      };
+
+      var interval = function (func, wait, times){
+        var interv = function(w, t){
+          return function(){
+            if(typeof t === "undefined" || t-- > 0){
+              setTimeout(interv, w);
+              try{
+                func.call(null);
+              }
+              catch(e){
+                t = 0;
+                throw e.toString();
+              }
+            }
+          };
+        }(wait, times);
+
+        setTimeout(interv, wait);
       };
 
     }]);

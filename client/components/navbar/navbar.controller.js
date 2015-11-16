@@ -4,9 +4,11 @@ angular.module('mjocoApp')
   .controller('NavbarCtrl', ['$rootScope', '$scope', '$location', '$log', '$window', 'localStorageService',
     function ($rootScope, $scope, $location, $log, $window, localStorageService) {
 
-      $scope.date = new Date();
-      $scope.link = '#';
+      $rootScope.voice.cover[0] = "<a href='#'>hello</a>";
+      $rootScope.voice.cover[1] = "<a href='#'>you</a>";
+      $rootScope.voice.cover[2] = "<a href='#'>are</a>";
+      $rootScope.voice.cover[3] = "<a href='#'>looking</a>";
+      $rootScope.voice.cover[4] = "<a href='#'>wonderful</a>";
 
-      //todo: write a controller that outputs a bunch of phrases and helper text depending on the location of the browser
-      console.log(document.location.pathname);
   }]);
+

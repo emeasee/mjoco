@@ -13,7 +13,7 @@
     </div>
   </div>
   <div class="active-wrap" ng-click="toggleMenu()">
-    <h1 class="voice"><a href="{{ link }}">It's {{ date }}</a></h1>
+    <h1 class="voice" ng-bind-html="voice.text"></h1>
     <div class="active-overflow">
       <div class="active" ng-class="{ arrow: primary.arrow }" ng-bind="primary.text">
       </div>
